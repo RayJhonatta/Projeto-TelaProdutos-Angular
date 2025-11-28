@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 98vh;
+    background-image: linear-gradient(to bottom, #F8F2E9, #E9DAC7);
+    font-family: Arial, sans-serif;
+}
+
+.div-login {
+    background-color: white;
+}
+
