@@ -1,20 +1,44 @@
 <html>
+    <link rel="stylesheet" href="../login-screen/login-screen.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <div class="container">
-        <div class="div-login">
-            <h2 class="title">Bem-Vindo a tela de Login!!</h2>
-            <form class="form-login">
-                <label for="username" class="label-name">Nome de Usuário:</label>
-                <input type="text" id="username" name="username" required class="input-name">
-
-                <label for="password" class="label-password">Senha:</label>
-                <input type="password" id="password" name="password" required class="input-password">
-
-                <button type="submit" class="button">Entrar</button>
-                <a href="#" class="link">Esqueceu a senha?</a>
-            </form>
-        </div>
-        <div class="div-image">
-            <img src="https://img.freepik.com/fotos-gratis/pessoa-usando-laptop_53876-95246.jpg?semt=ais_hybrid&w=740&q=80" alt="Foto de pessoa se cadastrando no computador" class="image">
-        </div>
+            <div class="container-info">
+                <div class="div-image">
+                    <img src="https://img.freepik.com/fotos-gratis/pessoa-usando-laptop_53876-95246.jpg?semt=ais_hybrid&w=740&q=80" alt="Foto de pessoa se cadastrando no computador" class="image">
+                </div>
+                <div class="div-login">
+                    <h2 class="title">Bem vindo a tela de Login!!</h2>
+                    <form class="form-login" [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+                        <div class="div-group">
+                            <label for="username" class="div-label">Nome de Usuário:</label>
+                            <input type="text" id="username" name="username" class="div-input" formControlName="username" placeholder="Digite seu Nome:">
+                        </div>
+                        <div class="div-group">
+                            <label for="email" class="div-label">Email:</label>
+                            <input type="text" id="email" name="email" class="div-input" formControlName="email" placeholder="Digite seu Email:" >
+                        </div>
+                        <div class="div-group">
+                            <label for="password" class="div-label">Senha:</label>
+                            <div class="input-eye">
+                                <input type="password" id="password" name="password" class="div-input-password" formControlName="password" placeholder="Digite sua Senha:" [type]="showPassword ? 'text' : 'password'">
+                                <span class="eye"><i class="fa-solid fa-eye" [ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'" (click)="togglePassword()"></i></span>
+                            </div>
+                        </div>
+                        <div class="div-button">
+                            <button type="submit" class="button">Entrar</button>
+                        </div>
+                        <div class="div-or">
+                            <hr>
+                            <p>ou</p>
+                            <hr>
+                        </div>
+                        <div class="div-accounts">
+                            <span class="social google"><a href="#"><i class="fa-brands fa-google"></i></a></span>
+                            <span class="social apple"><a href="#"><i class="fa-brands fa-apple"></i></a></span>
+                        </div>                          
+                    </form>
+                </div>
+            </div>
     </div>
 </html>

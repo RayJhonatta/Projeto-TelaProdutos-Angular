@@ -6,15 +6,285 @@
 
 .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 98vh;
+    height: 100%;
     background-image: linear-gradient(to bottom, #F8F2E9, #E9DAC7);
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; 
+}
+
+.container-info {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding-bottom: 50px;
+    width: 50%;
+}
+
+.image {
+    width: 50vw;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .div-login {
-    background-color: white;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    gap: 13px;
 }
 
+.div-login > .title {
+    font-size: 1.6em;
+    text-align: center;
+
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-login > .div-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.form-login > .div-group > .div-label {
+    font-weight: bold;
+}
+
+.form-login > .div-group > .div-input {
+    width: 43vw;
+    height: 25px;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.form-login > .div-group > .div-input:focus {
+    border: 2px solid #777;
+    outline: none;
+    transition: border-color 0.5s ease;
+}
+
+.form-login > .div-group > .input-eye {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.form-login > .div-group > .input-eye > .div-input-password {
+    width: 340px;
+    height: 25px;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.form-login > .div-group > .input-eye > .div-input-password:focus {
+    border: 2px solid #777;
+    outline: none;
+    transition: border-color 0.5s ease;
+}
+
+.input-eye > .eye {
+    position: absolute;
+    right: 10px;      
+    cursor: pointer;
+    color: black;
+    z-index: 2;     
+}
+
+.div-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.div-button > .button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.div-button > .button:hover {
+    background-color: darkblue;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.div-button > .link {
+    font-size: 1.1em;
+    text-decoration: none;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.div-button > .link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.div-or {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 10px;
+}
+
+.div-or > p {
+    color: rgb(128, 128, 128);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.div-or > hr {
+    border: 0.5px solid rgb(209, 209, 209);
+    width: 120px;
+}
+
+.div-accounts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.div-accounts > .social {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-accounts > span > a > .fa-google {
+    font-size: 1.7em;
+    color: black;
+    margin-top: 4px;
+}
+
+.div-accounts > span > a > .fa-apple {
+    font-size: 1.8em;
+    color: black;
+}
+
+.div-accounts > .social:hover {
+    border-color: #777;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.div-accounts > span > a > .fa-apple:hover {
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.div-accounts > span > a > .fa-google:hover {
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    .div-login > .title {
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .form-login > .div-group > .div-label {
+        font-size: 1em;
+    }
+
+    .form-login > .div-group > .input-eye > .div-input-password  {
+        width: 321px;
+    }
+
+
+}
+
+@media screen and (min-width: 873px) and (max-width: 992px) {
+    .container-info {
+        width: 70vw;
+    }
+
+    .image {
+        width: 70vw;
+    }
+
+    .div-login > .title {
+        font-size: 2em;
+    }
+
+    .form-login > .div-group > .div-label {
+        font-size: 1.2em;
+    }
+
+    .form-login > .div-group > .div-input {
+        width: 60vw;
+        height: 30px;
+    }
+
+    .div-button > .button {
+        padding: 12px 24px;
+        font-size: 1.1em;
+    }
+
+    .div-button > .link {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 993px) {
+    .container-info {
+        width: 900px; 
+        height: 490px;
+        display: flex; 
+        flex-direction: row; 
+        padding-bottom: 0; 
+        align-items: stretch;
+    }
+
+    .image {
+        width: 100%; 
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .div-login {
+        width: 50%; 
+        padding: 20px;
+    }
+
+    .div-login > .title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .form-login > .div-group > .div-input {
+       width: 300px;
+    }
+
+    .form-login > .div-group > .input-eye > .div-input-password {
+        width: 299px;
+    }
+}
