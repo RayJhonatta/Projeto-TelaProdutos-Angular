@@ -8,21 +8,21 @@
                     <img src="https://img.freepik.com/fotos-gratis/pessoa-usando-laptop_53876-95246.jpg?semt=ais_hybrid&w=740&q=80" alt="Foto de pessoa se cadastrando no computador" class="image">
                 </div>
                 <div class="div-login">
-                    <h2 class="title">Bem vindo a tela de Login!!</h2>
-                    <form class="form-login" [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+                    <h2 class="title">Bem vindo a tela de Cadastro!!</h2>
+                    <form class="form-login">
                         <div class="div-group">
                             <label for="username" class="div-label">Nome de Usuário:</label>
-                            <input type="text" id="username" name="username" class="div-input" formControlName="username" placeholder="Digite seu Nome:">
+                            <input type="text" id="username" name="username" class="div-input" formControlName="username" placeholder="Digite seu Nome">
                         </div>
                         <div class="div-group">
                             <label for="email" class="div-label">Email:</label>
-                            <input type="text" id="email" name="email" class="div-input" formControlName="email" placeholder="Digite seu Email:" >
+                            <input type="text" id="email" name="email" class="div-input" formControlName="email" placeholder="Digite seu Email" >
                         </div>
                         <div class="div-group">
                             <label for="password" class="div-label">Senha:</label>
                             <div class="input-eye">
-                                <input type="password" id="password" name="password" class="div-input-password" formControlName="password" placeholder="Digite sua Senha:" [type]="showPassword ? 'text' : 'password'">
-                                <span class="eye"><i class="fa-solid fa-eye" [ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'" (click)="togglePassword()"></i></span>
+                                <input type="password" id="password" name="password" class="div-input" formControlName="password" placeholder="Digite sua Senha">
+                                <span class="eye"><i class="fa-solid fa-eye"></i></span>
                             </div>
                         </div>
                         <div class="div-button">
@@ -30,12 +30,12 @@
                         </div>
                         <div class="div-or">
                             <hr>
-                            <p>ou</p>
+                            <p>OU</p>
                             <hr>
                         </div>
                         <div class="div-accounts">
-                            <span class="social google"><a href="#"><i class="fa-brands fa-google"></i></a></span>
-                            <span class="social apple"><a href="#"><i class="fa-brands fa-apple"></i></a></span>
+                            <span class="social"><a href="#"><i class="fa-brands fa-google"></i></a></span>
+                            <span class="social"><a href="#"><i class="fa-brands fa-apple"></i></a></span>
                         </div>                          
                     </form>
                 </div>
