@@ -214,7 +214,7 @@
 
     .eye {
         position: absolute;
-        right: 43px;
+        right: 47px;
     }
 
     .button {
@@ -233,6 +233,17 @@
 @media (min-width: 360px) and (max-width: 360px) {
     .container-info {
         margin-top: 180px;
+    }
+}
+
+@media (min-width: 390px) and (max-width: 390px) {
+    .input-eye {
+        position: relative;
+    }
+
+    .eye {
+        position: absolute;
+        right: 53px;
     }
 }
 
@@ -277,4 +288,307 @@
         width: 150px;
     }
 
+}
+
+@media (min-width: 412px) and (max-width: 412px) {
+
+    .div-or > hr {
+        width: 150px;
+    }
+
+    .input-eye {
+        position: relative;
+    }
+
+    .eye {
+        position: absolute;
+        right: 56px;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 540px) {
+    .container-info {
+        margin-top: 180px;
+        padding-bottom: 20px;
+    }
+
+    .div-image > .image {
+        width: 90vw;
+        height: 30vh;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .form-login > .div-group > .div-input  {
+        width: 80vw;
+    }
+
+    .input-eye {
+        position: relative;
+    }
+
+    #password {
+        width: 80vw;
+    }
+
+    .eye {
+        position: absolute;
+        right: 35px;
+    }
+
+    .div-button > .button {
+        width: 30vw;
+        height: 5vh;
+    }   
+
+    .div-or > hr  {
+        width: 38vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 768px) {
+
+    .div-image > .image {
+        width: 10vw;
+        height: 10vh;
+    }
+
+    .social {
+        font-size: 1.7em;
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (min-width: 820px) and (max-width: 820px) {
+
+    .form-login > .div-group > .div-input {
+        height: 120px;
+    }
+
+    .social {
+        font-size: 1.8em;
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 820px) {
+
+    .container-info {
+        margin-top: 180px;
+        height: 80vh;
+    }
+
+    .div-image > .image {
+        width: 90vw;
+        height: 35vh;
+    }
+
+    .div-login {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .div-login > .title {
+        font-size: 2.7em;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .form-login {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .div-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-login > .div-group > .div-label {
+        font-size: 1.5em;
+    }
+
+    .form-login > .div-group > .div-input {
+        height: 35px;
+        width: 80vw;
+    }
+
+    .form-login > .div-group > .div-input::placeholder {
+        font-size: 1.2em;
+        position: absolute;
+        top: 8px;
+    }
+
+    #password {
+        width: 80vw;
+        height: 35px;
+    }
+
+    #password::placeholder {
+        font-size: 1.2em;
+        position: absolute;
+        top: 8px;
+    }
+
+    .input-eye {
+        position: relative;
+    }
+
+    .eye {
+        font-size: 1.4em;
+        position: absolute;
+        right: 45px;
+    }
+
+    .div-button > .button {
+        width: 20vw;
+        height: 50px;
+        font-size: 1.5em;
+    }
+
+    .div-or {
+        margin-top: 10px;
+    }
+
+    .div-or > hr {
+        width: 38vw;
+    }
+
+    .div-or > p {
+        font-size: 1.9em;
+    }   
+}
+
+@media (min-width: 820px) and (max-width: 1280px) {
+
+    .container-info {
+        padding-bottom: 40px;
+        margin-top: 120px;
+    }
+
+    .div-image > .image {
+        width: 90vw;
+    }
+
+    .div-login > .title {
+        font-size: 2.1em;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .form-login {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-login > .div-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-login > .div-group > .div-label {
+        font-size: 1.6em;
+    }
+
+    .form-login > .div-group > .div-input::placeholder {
+        font-size: 1.2em;
+        position: absolute;
+        top: 8px;
+    }
+
+    .form-login > .div-group > .div-input {
+        width: 80vw;
+        height: 35px;
+    }
+
+    .input-eye {
+        position: relative;
+    }
+
+    #password {
+        width: 80vw;
+        height: 35px;
+    }
+
+    #password::placeholder {
+        font-size: 1.2em;
+        position: absolute;
+        top: 8px;
+    }
+
+    .eye {
+        position: absolute;
+        font-size: 1.4em;
+        right: 70px;
+    }
+
+    .div-button > .button {
+        width: 20vw;
+        height: 4vh;
+        font-size: 1.3em;
+    }
+
+    .div-or {
+        margin-top: 10px;
+    }
+
+    .div-or > p {
+        font-size: 1.6em;
+    }
+
+    .div-or > hr {
+        width: 40vw;
+    }
+
+    .social  {
+        width: 90px;
+        font-size: 1.6em;
+        height: 90px;
+    }
+}
+
+@media (min-width: 912px) and (max-width: 912px) {
+    .title {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1025px) {
+    .container-info {
+        padding-bottom: 90px;
+        margin-top: 170px;
+    }
+}
+
+@media (max-height: 600px) {
+    .container-info {
+        height: 88vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        align-items: center;
+
+    }
+
+    .div-image {
+        height: 100%;
+    }
+
+    .div-image > .image {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+    }
+
+    .div-login {
+       
+    }
 }
