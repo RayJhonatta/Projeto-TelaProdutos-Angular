@@ -570,25 +570,140 @@
 }
 
 @media (max-height: 600px) {
+
     .container-info {
-        height: 88vh;
+        height: 90vh;
         display: grid;
         grid-template-columns: 1fr 1fr; 
-        align-items: center;
-
+        margin-bottom: 15%;
+        overflow: hidden;
     }
 
     .div-image {
+        width: 100%;
         height: 100%;
     }
-
+    
     .div-image > .image {
         width: 100%;
-        height: 50%;
-        object-fit: cover;
+        height: 75%;
+        border-radius: 0;
     }
 
     .div-login {
-       
+        width: 40vw;
+        overflow-y: cover;
+        padding-left: 10px;
+    }
+
+    .div-login > .title {
+        text-align: center;
+        font-size: 1.7em;
+        padding-left: 50px;
+    }
+
+   .form-login > .div-group > .div-label {
+        font-size: 1.3em;
+   }
+
+   .form-login > .div-group > .div-input {
+        width: 39vw;
+        height: 30px;
+   }
+
+   .form-login > .div-group > .div-input::placeholder  {
+        font-size: 0.9em;
+   }
+
+   #password {
+        width: 43vw;
+        height: 30px;
+   }
+
+   #password::placeholder {
+        font-size: 0.9em;
+   }
+
+   .eye {
+    position: relative;
+   }
+
+   .eye > .fa-eye {
+        position: absolute;
+        bottom: 14px;
+        left: 30px;
+        font-size: 0.9em;
+   }
+
+   .div-button {
+        margin-left: 20px;
+   }
+
+    .div-button > .button {
+        height: 40px;
+   }
+
+   .div-or {
+        margin-left: 25px;
+   }
+}
+
+
+@media (min-width: 1300px) {
+    .container-info {
+        height: 92vh;
+        width: 97vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .div-image > .image {
+    
+    }
+
+    .div-login {
+        padding-left: 20px;
+        
+    }
+
+    .div-login > .title {
+        text-align: center;
+        font-size: 2.4em;
+    }
+
+    .form-login > .div-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    } 
+
+    .div-group > .div-input {
+        width: 45vw;
+        height: 40px;
+    }
+
+    #password {
+        width: 45vw;
+        height: 40px;
+    }
+
+    .eye {
+        position: relative;
+    }
+
+    .fa-eye {
+        position: absolute;
+        top: 3px;
+        right: 10px;
+        font-size: 1.4em;
+    }
+
+    .div-button > .button {
+        width: 120px;
+        height: 40px;
+    }
+
+    .div-or {
+
     }
 }
