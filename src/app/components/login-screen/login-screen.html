@@ -23,7 +23,9 @@
                             <label for="password" class="div-label">Senha:</label>
                             <div class="input-eye">
                                 <input type="password" id="password" name="password" class="div-input" placeholder="Digite sua Senha">
-                                <span class="eye"><i class="fa-solid fa-eye"></i></span>
+                                <span class="eye" (click)="toggleSenha()">
+                                    <i class="fa-solid" [ngClass]="hidePassword ? 'fa-eye' : 'fa-eye-slash' "></i>
+                                </span>
                             </div>
                         </div>
                         <div class="div-button">
