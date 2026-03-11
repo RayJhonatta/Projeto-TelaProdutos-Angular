@@ -10,19 +10,19 @@
                 </div>
                 <div class="div-login">
                     <h2 class="title">Bem vindo a tela de Cadastro!!</h2>
-                    <form class="form-login">
+                    <form class="form-login" (ngSubmit)="onSubmit()" [formGroup]="data">
                         <div class="div-group">
                             <label for="username" class="div-label">Nome de Usuário:</label>
-                            <input type="text" id="username" name="username" class="div-input" placeholder="Digite seu Nome">
+                            <input type="text" id="username" name="username" class="div-input" placeholder="Digite seu Nome" formControlName="name">
                         </div>
                         <div class="div-group">
                             <label for="email" class="div-label">Email:</label>
-                            <input type="text" id="email" name="email" class="div-input" placeholder="Digite seu Email" >
+                            <input type="text" id="email" name="email" class="div-input" placeholder="Digite seu Email" formControlName="email">
                         </div>
                         <div class="div-group">
                             <label for="password" class="div-label">Senha:</label>
                             <div class="input-eye">
-                                <input type="password" id="password" name="password" class="div-input" placeholder="Digite sua Senha">
+                                <input type="password" id="password" name="password" class="div-input" placeholder="Digite sua Senha"  formControlName="password">
                                 <span class="eye" (click)="toggleSenha()">
                                     <i class="fa-solid" [ngClass]="hidePassword ? 'fa-eye' : 'fa-eye-slash' "></i>
                                 </span>
