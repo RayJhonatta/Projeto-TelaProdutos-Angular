@@ -52,7 +52,6 @@ export class LoginScreen {
 
       if(this.data.valid) {
         const newRegister: NewLogin = this.data.value as NewLogin
-        console.log(newRegister);
 
         this.snackBar.open('Cadastro realizado com sucesso!!', 'Fechar', {
           duration: 3000,

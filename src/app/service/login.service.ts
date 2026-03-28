@@ -10,21 +10,21 @@ import { Observable } from 'rxjs';
 export class LoginService {
 
     private http = inject(HttpClient);
-    private readonly url = ''
+    private readonly url = 'http://127.0.0.1:8000/api/login'
 
     getLogin(): Observable<Login[]> {
         return this.http.get<Login[]>(`${this.url}/listar`);
     }
 
-    addLogin(login: NewLogin): Observable<NewLogin[]> {
-        return this.http.post<NewLogin[]>(`${this.url}/nova`, login) 
+    addLogin(login: NewLogin): Observable<Login> {
+        return this.http.post<Login>(`${this.url}/nova`, login) 
     }
 
-    updateLogin(login: Login): Observable<Login[]> {
-        return this.http.put<Login[]>(`${this.url}/editar`, login);
+    updateLogin(login: Login): Observable<Login> {
+        return this.http.put<Login>(`${this.url}/editar/${login.id}`, login);
     }
 
     deleteLogin(loginId: number): Observable<void> {
-        return this.http.delete<void>(`${this.url}/deletar`);
+        return this.http.delete<void>(`${this.url}/deletar/${loginId}`);
     }
 }
