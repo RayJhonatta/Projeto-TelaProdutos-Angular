@@ -1,10 +1,11 @@
-import { Component, inject } from '@angular/core';
+import { Component, Inject, inject } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { CommonModule } from '@angular/common';
 import { ProductsList } from '../products-list/products-list';
 import { Router } from '@angular/router';
 import { Login, NewLogin  } from '../../models/login.model';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -20,6 +21,8 @@ export class LoginScreen {
   hidePassword: boolean = false;
   private getData = inject(FormBuilder);
   private snackBar = inject(MatSnackBar);
+  private http = inject(HttpClient);
+  private router = inject(Router);
    
   toggleSenha() {
     const input = document.getElementById('password') as HTMLInputElement;
@@ -40,7 +43,6 @@ export class LoginScreen {
   });
 
   onSubmit() {
-
       if (this.data.invalid) {
         this.snackBar.open('Dados estão invalidos!! Por favor verifique os dados novamente!!', 'Fechar', {
           duration: 3000,
@@ -53,12 +55,21 @@ export class LoginScreen {
       if(this.data.valid) {
         const newRegister: NewLogin = this.data.value as NewLogin
 
-        this.snackBar.open('Cadastro realizado com sucesso!!', 'Fechar', {
-          duration: 3000,
-          horizontalPosition: 'center',
-          verticalPosition: 'top'
-        })
-          this.data.reset()
+        this.http.post('http://127.0.0.1:8000/api/person', newRegister).subscribe({
+          next: () => {
+            this.snackBar.open('Cadastro realizado com sucesso!!', 'Fechar', {
+              duration: 3000,
+              horizontalPosition: 'center',
+              verticalPosition: 'top'
+            })
+              this.data.reset()
+              this.router.navigate(['/dashboard']);
+          }
+        });
       }
+    }
+
+  login() {
+    this.router.navigate(['/register']);
   }
 }

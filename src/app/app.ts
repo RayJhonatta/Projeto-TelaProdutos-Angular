@@ -1,10 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { LoginScreen } from './components/login-screen/login-screen';
-
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',   
-  imports: [LoginScreen],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
