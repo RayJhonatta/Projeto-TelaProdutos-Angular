@@ -1,0 +1,44 @@
+<html>
+    <link rel="stylesheet" href="../registration-screen/registration-screen.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="assets/programacao.png" type="image/x-icon">
+    <div class="container">
+            <div class="container-info">
+                <div class="div-image">
+                    <img src="assets/images/pessoa-computador.png" alt="Foto de pessoa se cadastrando no computador" class="image">
+                </div>
+                <div class="div-login">
+                    <h2 class="title">Bem vindo a Tela de Cadastro!!</h2>
+                    <form class="form-login" (ngSubmit)="onSubmit()" [formGroup]="data">
+                        <div class="div-group">
+                            <label for="email" class="div-label">Email:</label>
+                            <input type="text" id="email" name="email" class="div-input" placeholder="Digite seu Email" formControlName="email">
+                        </div>
+                        <div class="div-group">
+                            <label for="password" class="div-label">Senha:</label>
+                            <div class="input-eye">
+                                <input type="password" id="password" name="password" class="div-input" placeholder="Digite sua Senha"  formControlName="password">
+                                <span class="eye" (click)="toggleSenha()">
+                                    <i class="fa-solid" [ngClass]="hidePassword ? 'fa-eye' : 'fa-eye-slash' "></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="div-button">
+                            <button type="submit" class="button">Entrar</button>
+                            <span class="text-account">Não possui conta ainda? <p class="paragraph" (click)="back()">Entre aqui</p></span>
+                        </div>
+                        <div class="div-or">
+                            <hr>
+                            <p>OU</p>
+                            <hr>
+                        </div>
+                        <div class="div-accounts">
+                            <span class="social"><a href="#"><i class="fa-brands fa-google"></i></a></span>
+                            <span class="social"><a href="#"><i class="fa-brands fa-apple"></i></a></span>
+                        </div>                          
+                    </form>
+                </div>
+            </div>
+    </div>
+</html>
