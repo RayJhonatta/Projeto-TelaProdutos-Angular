@@ -4,7 +4,8 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { Login, NewLogin  } from '../../models/login.model';
+import { Login, LoginRequest, NewLogin  } from '../../models/login.model';
+import { LoginService } from '../../service/login.service';
 
 @Component({
     selector: 'app-login-screen',
@@ -20,6 +21,7 @@ export class RegistrationScreen {
     private snackBar = inject(MatSnackBar);
     private http = inject(HttpClient);
     private router = inject(Router);
+    private service = inject(LoginService);
 
     toggleSenha() {
         const input = document.getElementById('password') as HTMLInputElement;
@@ -39,20 +41,11 @@ export class RegistrationScreen {
     });
 
 
-     onSubmit() {
-        if (this.data.invalid) {
-          this.snackBar.open('Dados estão invalidos!! Por favor verifique os dados novamente!!', 'Fechar', {
-            duration: 3000,
-            horizontalPosition: 'center',
-            verticalPosition: 'top'
-          });
-          return; 
-        } 
-  
+     onSubmit() {  
         if(this.data.valid) {
-            const newRegister: NewLogin = this.data.value as NewLogin
+            const register:  LoginRequest = this.data.value as LoginRequest;
 
-          this.http.post('http://127.0.0.1:8000/api/person', newRegister).subscribe({
+          this.service.login(register).subscribe({
             next: () => {
               this.snackBar.open('Cadastro realizado com sucesso!!', 'Fechar', {
                 duration: 3000,
@@ -61,7 +54,14 @@ export class RegistrationScreen {
               })
                 this.data.reset()
                 this.router.navigate(['/dashboard']);
-            }
+            }, error: () => {
+                this.snackBar.open('Dados estão invalidos!! Por favor verifique os dados novamente!!', 'Fechar', {
+                  duration: 3000,
+                  horizontalPosition: 'center',
+                  verticalPosition: 'top'
+                });
+                return; 
+              }
           });
         }
     } 

@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
-import { Login, NewLogin } from "../models/login.model";
+import { Login, LoginRequest, NewLogin } from "../models/login.model";
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -10,21 +10,26 @@ import { Observable } from 'rxjs';
 export class LoginService {
 
     private http = inject(HttpClient);
-    private readonly url = 'http://127.0.0.1:8000/api/login'
+    private readonly loginUrl = 'http://127.0.0.1:8000/api/login';
+    private readonly personUrl = 'http://127.0.0.1:8000/api/person';
+
+    login(login: LoginRequest): Observable<Login> {
+        return this.http.post<Login>(`${this.loginUrl}`, login);
+    }
 
     getLogin(): Observable<Login[]> {
-        return this.http.get<Login[]>(`${this.url}/listar`);
+        return this.http.get<Login[]>(this.personUrl);
     }
-
+    
     addLogin(login: NewLogin): Observable<Login> {
-        return this.http.post<Login>(`${this.url}/nova`, login) 
+        return this.http.post<Login>(this.personUrl, login);
     }
-
+    
     updateLogin(login: Login): Observable<Login> {
-        return this.http.put<Login>(`${this.url}/editar/${login.id}`, login);
+        return this.http.put<Login>(`${this.personUrl}/${login.id}`, login);
     }
-
+    
     deleteLogin(loginId: number): Observable<void> {
-        return this.http.delete<void>(`${this.url}/deletar/${loginId}`);
+        return this.http.delete<void>(`${this.personUrl}/${loginId}`);
     }
 }
