@@ -10,8 +10,8 @@ import { Observable } from 'rxjs';
 export class LoginService {
 
     private http = inject(HttpClient);
-    private readonly loginUrl = 'http://127.0.0.1:8000/api/login';
-    private readonly personUrl = 'http://127.0.0.1:8000/api/person';
+    private readonly loginUrl = `${environment.apiUrl}/login`;
+    private readonly personUrl = `${environment.apiUrl}/person`;
 
     login(login: LoginRequest): Observable<Login> {
         return this.http.post<Login>(`${this.loginUrl}`, login);
