@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'https://projeto-telaprodutos-laravel-production.up.railway.app/api'
+  apiUrl: 'http://127.0.0.1:8000'
 };
