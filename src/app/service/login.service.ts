@@ -33,4 +33,6 @@ export class LoginService {
     deleteLogin(loginId: number): Observable<void> {
         return this.http.delete<void>(`${this.personUrl}/${loginId}`);
     }
+
+    
 }
