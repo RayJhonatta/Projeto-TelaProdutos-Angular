@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { ProductsList } from '../products-list/products-list';
 import { Router } from '@angular/router';
 import { Login, NewLogin  } from '../../models/login.model';
+import { LoginService } from '../../service/login.service';
 import { HttpClient } from '@angular/common/http';
 
 
@@ -23,6 +24,7 @@ export class LoginScreen {
   private snackBar = inject(MatSnackBar);
   private http = inject(HttpClient);
   private router = inject(Router);
+  private loginService = inject(LoginService);
    
   toggleSenha() {
     const input = document.getElementById('password') as HTMLInputElement;
@@ -55,7 +57,7 @@ export class LoginScreen {
       if(this.data.valid) {
         const newRegister: NewLogin = this.data.value as NewLogin
 
-        this.http.post('http://127.0.0.1:8000/api/person', newRegister).subscribe({
+        this.loginService.addLogin(newRegister).subscribe({
           next: () => {
             this.snackBar.open('Cadastro realizado com sucesso!!', 'Fechar', {
               duration: 3000,
