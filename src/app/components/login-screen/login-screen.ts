@@ -44,32 +44,42 @@ export class LoginScreen {
     'password': ['', [Validators.required, Validators.minLength(8)]]
   });
 
-  onSubmit() {
-      if (this.data.invalid) {
-        this.snackBar.open('Dados estão invalidos!! Por favor verifique os dados novamente!!', 'Fechar', {
-          duration: 3000,
-          horizontalPosition: 'center',
-          verticalPosition: 'top'
-        });
-        return; 
-      } 
+  onSubmit(event: Event) {
+    event.preventDefault();
 
-      if(this.data.valid) {
-        const newRegister: NewLogin = this.data.value as NewLogin
+    if (this.data.invalid) {
+      this.snackBar.open('Dados estão inválidos!! Por favor verifique os dados novamente!!', 'Fechar', {
+        duration: 3000,
+        horizontalPosition: 'center',
+        verticalPosition: 'top'
+      });
+      return; 
+    } 
 
-        this.loginService.addLogin(newRegister).subscribe({
-          next: () => {
-            this.snackBar.open('Cadastro realizado com sucesso!!', 'Fechar', {
-              duration: 3000,
-              horizontalPosition: 'center',
-              verticalPosition: 'top'
-            })
-              this.data.reset()
-              this.router.navigate(['/dashboard']);
-          }
-        });
-      }
+    if (this.data.valid) {
+      const newRegister: NewLogin = this.data.value as NewLogin;
+
+      this.loginService.addLogin(newRegister).subscribe({
+        next: () => {
+          this.snackBar.open('Cadastro realizado com sucesso!!', 'Fechar', {
+            duration: 3000,
+            horizontalPosition: 'center',
+            verticalPosition: 'top'
+          });
+          this.data.reset();
+          this.router.navigate(['/dashboard']);
+        },
+        error: (err) => {
+          console.error('Erro ao cadastrar:', err);
+          this.snackBar.open('Erro ao realizar cadastro no servidor.', 'Fechar', {
+            duration: 3000,
+            horizontalPosition: 'center',
+            verticalPosition: 'top'
+          });
+        }
+      });
     }
+  }
 
   login() {
     this.router.navigate(['/register']);

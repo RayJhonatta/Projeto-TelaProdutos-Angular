@@ -10,7 +10,7 @@
                 </div>
                 <div class="div-login">
                     <h2 class="title">Bem vindo a Tela de Cadastro!!</h2>
-                    <form class="form-login" (ngSubmit)="onSubmit()" [formGroup]="data">
+                    <form class="form-login" (ngSubmit)="onSubmit($event)" [formGroup]="data">
                         <div class="div-group">
                             <label for="username" class="div-label">Nome de Usuário:</label>
                             <input type="text" id="username" name="username" class="div-input" placeholder="Digite seu Nome" formControlName="name">
