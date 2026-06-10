@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav {
+    background-image: linear-gradient(to bottom, #F8F2E9, #E9DAC7);
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 10px;
+    font-size: 0.9em;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.div-logo {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    font-size: 1.2em;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.div-logo > #icon-school {
+    color: #A38664;
+}
+
+.icons {
+    display: none;
+}
+
+.nav-item:active {
+    background-color: #efdfd0;
+    border: 1px solid;
+    border-color: #98672b;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}

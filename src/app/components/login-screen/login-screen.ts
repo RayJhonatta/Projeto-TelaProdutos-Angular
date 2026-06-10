@@ -47,6 +47,15 @@ export class LoginScreen {
   onSubmit(event: Event) {
     event.preventDefault();
 
+    if (this.data.value.name === '' || this.data.value.email === '' || this.data.value.password === '') {
+      this.snackBar.open('Campos obrigatórios não preenchidos!!', 'Fechar', {
+        duration: 3000,
+        horizontalPosition: 'center',
+        verticalPosition: 'top'
+      });
+      return;
+    }
+
     if (this.data.invalid) {
       this.snackBar.open('Dados estão inválidos!! Por favor verifique os dados novamente!!', 'Fechar', {
         duration: 3000,
@@ -71,7 +80,7 @@ export class LoginScreen {
         },
         error: (err) => {
           console.error('Erro ao cadastrar:', err);
-          this.snackBar.open('Erro ao realizar cadastro no servidor.', 'Fechar', {
+          this.snackBar.open('Erro ao realizar cadastro!! Já existe um usuário com esses dados!!', 'Fechar', {
             duration: 3000,
             horizontalPosition: 'center',
             verticalPosition: 'top'
