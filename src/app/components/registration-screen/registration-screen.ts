@@ -41,7 +41,17 @@ export class RegistrationScreen {
     });
 
 
-     onSubmit() {  
+     onSubmit(event: Event) {  
+      event.preventDefault();
+        if (this.data.value.email === '' || this.data.value.password === '') {
+          this.snackBar.open('Campos obrigatórios não preenchidos!!', 'Fechar', {
+            duration: 3000,
+            horizontalPosition: 'center',
+            verticalPosition: 'top'
+          });
+          return;
+        }
+
         if(this.data.valid) {
             const register:  LoginRequest = this.data.value as LoginRequest;
 

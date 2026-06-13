@@ -10,7 +10,7 @@
                 </div>
                 <div class="div-login">
                     <h2 class="title">Bem vindo a Tela de Cadastro!!</h2>
-                    <form class="form-login" (ngSubmit)="onSubmit()" [formGroup]="data">
+                    <form class="form-login" (ngSubmit)="onSubmit($event)" [formGroup]="data">
                         <div class="div-group">
                             <label for="email" class="div-label">Email:</label>
                             <input type="text" id="email" name="email" class="div-input" placeholder="Digite seu Email" formControlName="email">

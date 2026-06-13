@@ -39,18 +39,372 @@
     color: #A38664;
 }
 
-.icons {
+.div-title-icon > .icons {
     display: none;
 }
 
-.nav-item:active {
+.div-title-icon > .nav-item:active {
     background-color: #efdfd0;
     border: 1px solid;
     border-color: #98672b;
-    width: 80px;
+    width: 70px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+}
+
+.nav > .div-title-icon:nth-child(3) > .nav-item:active {
+    width: 60px;
+}
+
+.nav > .div-title-icon:nth-child(4) > .nav-item:active {
+    width: 60px;
+}
+
+@media (min-width: 319px) and (max-width: 319px) {
+    .nav {
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 344px) and (max-width: 360px) {
+    .nav {
+        font-size: 0.8em;
+    }
+
+    
+    .nav > .div-title-icon:nth-child(3) > .nav-item:active,
+    .nav > .div-title-icon:nth-child(4) > .nav-item:active {
+        width: 50px;
+    }
+
+    .nav > .div-title-icon:nth-child(2) > .nav-item:active,
+    .nav > .div-title-icon:nth-child(5) > .nav-item:active {
+        width: 60px;
+    }
+}
+
+@media (min-width: 412px) and (max-width: 430px) {
+    .nav  {
+        font-size: 1em;
+    }
+
+    .nav > .div-title-icon:nth-child(2) > .nav-item:active, 
+    .nav > .div-title-icon:nth-child(5) > .nav-item:active {
+        width: 75px;
+    }
+}
+
+@media (min-width: 414px) and (max-width: 414px) {
+    .nav > .div-title-icon:nth-child(2) > .nav-item:active,
+    .nav > .div-title-icon:nth-child(5) > .nav-item:active  {
+        width: 75px;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 540px) {
+    .nav {
+        height: 70px;
+        font-size: 1.3em;
+    }
+
+    .div-title-icon > .nav-item:active {
+        background-color: #efdfd0;
+        border: 2px solid;
+        border-color: #98672b;
+        width: 100px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    .nav > .div-title-icon:nth-child(3) > .nav-item:active {
+        width: 85px;
+    }
+
+    .nav > .div-title-icon:nth-child(4) > .nav-item:active {
+        width: 80px;
+    }
+
+    .div-logo {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .div-logo > .logo-text {
+        font-size: 1em;
+    }
+
+    .div-logo > #icon-school {
+        font-size: 1.4em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 912px) {
+    .nav {
+        height: 100px;
+        font-size: 1.8em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .nav > .div-title-icon:nth-child(3) > .nav-item:active, 
+    .nav > .div-title-icon:nth-child(4) > .nav-item:active  {
+        width: 115px;
+    }
+    
+    .div-title-icon > .nav-item:active {
+        background-color: #efdfd0;
+        border: 2px solid;
+        border-color: #98672b;
+        width: 140px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    }
+    
+    .div-logo {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .div-logo > .logo-text {
+        font-size: 1.1em;
+    }
+
+    .div-logo > #icon-school {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1280px) {
+    .nav {
+        height: 100px;
+        font-size: 1.9em;
+        display: flex;
+        gap: 20px;
+    }
+
+    .div-title-icon {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .div-title-icon:active {
+        background-color: #efdfd0;
+        border: 2px solid;
+        border-color: #98672b;
+        width: 210px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;  
+    }
+
+    .div-title-icon > .icons {
+        display: block;
+        font-size: 1.9em;
+        color: #A38664;
+    }
+
+    .div-title-icon > .icons:active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav > .div-title-icon:nth-child(2) > .nav-item:active,
+    .nav > .div-title-icon:nth-child(3) > .nav-item:active,
+    .nav > .div-title-icon:nth-child(4) > .nav-item:active,
+    .nav > .div-title-icon:nth-child(5) > .nav-item:active {
+        width: 130px;
+        border: none;
+    }
+
+    .nav > .div-title-icon:nth-child(3):active,
+    .nav > .div-title-icon:nth-child(4):active {
+        width: 180px;
+        display: flex;
+        padding-right: 20px;
+        padding-left: 20px;
+    } 
+
+    .nav-item:nth-of-type(3):active {
+        width: 120px;
+    }
+
+    .nav > .div-logo {
+        margin-right: 15%;
+        font-size: 1.5em;
+        display: flex;
+        gap: 20px;
+    }
+
+    .div-logo > #icon-school {
+        font-size: 1.4em;
+    }
+}
+
+@media (min-height: 600px) and (max-height: 600px) { 
+    .nav {
+        height: 100px;
+        font-size: 1.9em;
+        display: flex;
+        gap: 50px;
+    }
+
+    .div-title-icon > .nav-item:active {
+        background-color: #efdfd0;
+        border: 2px solid;
+        border-color: #98672b;
+        width: 150px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;    
+    }
+
+    .nav > .div-title-icon:nth-child(3) > .nav-item:active,
+    .nav > .div-title-icon:nth-child(4) > .nav-item:active {
+        width: 120px;
+    }
+
+    .nav > .div-logo {
+        margin-right: 5%;
+        font-size: 1.5em;
+        display: flex;
+        gap: 10px;
+    }
+
+    .div-logo > #icon-school {
+        font-size: 1.1em;
+    }
+
+}
+
+@media (min-height: 1366px) and (max-height: 1366px) {
+
+    .nav {
+        height: 110px;
+        font-size: 1.9em;
+        display: flex;
+        gap: 30px;
+    }
+
+    .div-title-icon > .nav-item:active {
+        background-color: #efdfd0;
+        border: 2px solid;
+        border-color: #98672b;
+        width: 150px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;    
+    }
+
+    .nav > .div-title-icon:nth-child(3) > .nav-item:active,
+    .nav > .div-title-icon:nth-child(4) > .nav-item:active {
+        width: 130px;
+    }
+
+    .nav > .div-logo {
+        margin-right: 10%;
+        font-size: 1.8em;
+        display: flex;
+        gap: 20px;
+    }
+
+    .div-logo > #icon-school {
+        font-size: 1.3em;
+    }
+}
+
+
+@media (min-width: 1290px) {
+    .nav {
+        width: 18%;
+        height: 100%;
+        background-color: rgb(250, 248, 245);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 20px;
+        gap: 30px;
+        border-right: 1px solid #D1D1D1;
+    }
+
+    .div-logo {
+        font-size: 2.1em;
+        display: flex;
+        gap: 20px;
+    }
+
+    .div-logo > #icon-school {
+        font-size: 1.9em;
+    }
+
+    .div-title-icon {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-right: 50px;
+        background-color: transparent;
+    }
+
+    .nav > .div-title-icon:nth-child(3),
+    .nav > .div-title-icon:nth-child(4)
+    {
+        margin-right: 65px;
+    }
+
+    .div-title-icon > .icons {
+        display: block;
+        color: #A38664;
+        font-size: 2.5em;
+    }
+
+    .div-title-icon:hover {
+        background-color: #E8E2D5;
+        border-radius: 12px;    
+        cursor: pointer;           
+        transition: all 0.4s ease;
+        width: 200px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+    }
+
+    .div-title-icon:hover .nav-item,
+    .div-title-icon:hover .icons {
+        color: #8C6239; 
+    }
+
+    .div-title-icon > .nav-item {
+        font-size: 1.3em;
+    }
+
+    .div-title-icon > .nav-item:active {
+        border: none;
+    }
 }
