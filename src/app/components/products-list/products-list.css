@@ -63,6 +63,101 @@
     width: 60px;
 }
 
+.header > .account {
+    background-color: #f3ede7;
+    margin-top: 60px;
+    height: 90px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 5px;
+    margin-left: 70%;
+}
+
+.account > .photo {
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account > .photo > .icon {
+    color: black;
+}
+
+.div-text-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.div-text-profile > .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: #8C8275;
+}
+
+.div-text-profile > .profile:active {
+    background-color: black;
+}
+
+.menu-dropdown {
+    position: absolute;
+    top: 40px;   
+    left: -15px;                            
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;          
+    font-size: 0.7em;
+    color: #8C8275;
+    border: 1px solid #bba486;
+    border-radius: 10px;
+    width: 100px;
+    height: 70px;
+}
+
+.menu-dropdown > .my-accont {
+    border-color:#98672b;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 1em;
+    border: 1px solid #bba486;
+    width: 70px;
+    height: 25px;
+    border-radius: 5px;
+    padding-top: 1.5px;
+}
+
+.menu-dropdown > .my-accont:active {
+    background-color: #bca17c;
+    color: white;
+}
+
+.menu-dropdown > .exit {
+    color: red;
+    text-align: center;
+    margin: -5px;
+}
+
+.menu-dropdown > .exit:active {
+    text-decoration: underline;
+    color: black;
+}
+
 @media (min-width: 319px) and (max-width: 319px) {
     .nav {
         font-size: 0.9em;

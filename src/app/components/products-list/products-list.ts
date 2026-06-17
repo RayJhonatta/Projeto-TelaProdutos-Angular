@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products-list',
@@ -6,6 +7,14 @@ import { Component } from '@angular/core';
   templateUrl: './products-list.html',
   styleUrl: './products-list.css',
 })
-export class ProductsList {
+export class ProductsList implements OnInit {
+  private router = inject(Router);
 
+  exit() {
+    this.router.navigate(['/login']);
+  }
+
+  ngOnInit(): void {
+    //
+  }
 }
