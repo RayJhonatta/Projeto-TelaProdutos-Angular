@@ -8,8 +8,6 @@ import { Login, NewLogin  } from '../../models/login.model';
 import { LoginService } from '../../service/login.service';
 import { HttpClient } from '@angular/common/http';
 
-
-
 @Component({
   selector: 'app-login-screen',
   standalone: true,
@@ -68,13 +66,21 @@ export class LoginScreen {
     if (this.data.valid) {
       const newRegister: NewLogin = this.data.value as NewLogin;
 
+      // Mantemos o seu método addLogin para Cadastrar
       this.loginService.addLogin(newRegister).subscribe({
-        next: () => {
+        next: (resposta: any) => { 
           this.snackBar.open('Cadastro realizado com sucesso!!', 'Fechar', {
             duration: 3000,
             horizontalPosition: 'center',
             verticalPosition: 'top'
           });
+
+          if (resposta && resposta.token) {
+            localStorage.setItem('studyflow_token', resposta.token);
+          } else {
+            localStorage.setItem('studyflow_token', 'token_temporario_cadastro'); 
+          }
+
           this.data.reset();
           this.router.navigate(['/dashboard']);
         },

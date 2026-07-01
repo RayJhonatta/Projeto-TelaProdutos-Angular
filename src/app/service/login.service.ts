@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
 import { Login, LoginRequest, NewLogin } from "../models/login.model";
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -18,7 +18,18 @@ export class LoginService {
     }
 
     login(login: LoginRequest): Observable<Login> {
-        return this.http.post<Login>(`${this.getBaseUrl()}/login`, login);
+        return this.http.post<Login>(`${this.getBaseUrl()}/login`, login).pipe(
+            tap((response: any) => {
+                if (response && response.email) {
+                    localStorage.setItem('studyflow_token', response.email);
+                }
+                console.log('Resposta real do Laravel:', response);
+            })
+        );
+    }
+
+    logout(): void {
+        localStorage.removeItem('studyflow_token');
     }
 
     getLogin(): Observable<Login[]> {

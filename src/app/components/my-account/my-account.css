@@ -1,0 +1,90 @@
+/* Limpeza geral de margens */
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+:host {
+    display: block;
+    background-color: #ffffff;
+    border: 8px solid #bba486;
+    border-radius: 25px;           
+    width: 310px;   
+    height: 400px;       
+    overflow: hidden !important; 
+}
+
+:host ::ng-deep .mat-mdc-dialog-container,
+:host ::ng-deep .mat-mdc-dialog-inner-container,
+:host ::ng-deep .mdc-dialog__surface {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0px !important;
+    overflow: hidden !important;
+}
+
+.title {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #2c2c2c;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 20px;
+    width: 100%;
+}
+
+.container-second {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; 
+}
+
+.container-third {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.container-third > label {
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: #333;
+}
+
+.container-third > input {
+    width: 100%; 
+    border: 1px solid #bba486;
+    background-color: #f9f9f9;
+    font-size: 1.1em;
+    outline: none;
+    border-radius: 8px; 
+    padding: 12px;
+}
+
+.container-buttons {
+    display: flex;
+    flex-direction: row; 
+    gap: 15px;
+}
+
+.container-buttons button[type="button"],
+.container-buttons button[type="submit"] {
+    flex: 1;                  
+    padding: 12px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 10px;      
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    background-color: #bba486;
+    border: none;
+}

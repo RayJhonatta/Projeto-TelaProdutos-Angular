@@ -8,12 +8,12 @@ import { Login, LoginRequest, NewLogin  } from '../../models/login.model';
 import { LoginService } from '../../service/login.service';
 
 @Component({
-    selector: 'app-login-screen',
+    selector: 'app-registration-screen',
     standalone: true,
     imports: [MatSnackBarModule, ReactiveFormsModule, CommonModule],
     templateUrl: './registration-screen.html',
     styleUrls: ['./registration-screen.css'],
-  })
+})
 export class RegistrationScreen {
 
     hidePassword: boolean = false;
@@ -40,8 +40,7 @@ export class RegistrationScreen {
         'password': ['', [Validators.required, Validators.minLength(8)]]
     });
 
-
-     onSubmit(event: Event) {  
+    onSubmit(event: Event) {  
       event.preventDefault();
         if (this.data.value.email === '' || this.data.value.password === '') {
           this.snackBar.open('Campos obrigatórios não preenchidos!!', 'Fechar', {
@@ -52,26 +51,26 @@ export class RegistrationScreen {
           return;
         }
 
-        if(this.data.valid) {
-            const register:  LoginRequest = this.data.value as LoginRequest;
+        if (this.data.valid) {
+          const register: LoginRequest = this.data.value as LoginRequest;
 
           this.service.login(register).subscribe({
             next: () => {
-              this.snackBar.open('Cadastro realizado com sucesso!!', 'Fechar', {
+              this.snackBar.open('Login realizado com sucesso!!', 'Fechar', {
                 duration: 3000,
                 horizontalPosition: 'center',
                 verticalPosition: 'top'
-              })
-                this.data.reset()
-                this.router.navigate(['/dashboard']);
-            }, error: () => {
-                this.snackBar.open('Dados estão invalidos!! Por favor verifique os dados novamente!!', 'Fechar', {
-                  duration: 3000,
-                  horizontalPosition: 'center',
-                  verticalPosition: 'top'
-                });
-                return; 
-              }
+              });
+              this.data.reset();
+              this.router.navigate(['/dashboard']); 
+            }, 
+            error: () => {
+              this.snackBar.open('Dados estão inválidos!! Por favor verifique os dados novamente!!', 'Fechar', {
+                duration: 3000,
+                horizontalPosition: 'center',
+                verticalPosition: 'top'
+              });
+            }
           });
         }
     } 
