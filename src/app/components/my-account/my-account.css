@@ -90,6 +90,14 @@
     -webkit-appearance: none;
 }
 
+.container-buttons button[type="submit"] {
+    color: #ffffff !important; 
+}
+
+.container-buttons button[type="button"] {
+    color: #2c2c2c !important; 
+}
+
 @media (min-width: 390px) and (max-width: 430px) {
     :host {
         height: 450px;
