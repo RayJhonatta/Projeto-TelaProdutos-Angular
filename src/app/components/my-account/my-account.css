@@ -70,6 +70,12 @@
     padding: 12px;
 }
 
+.container-third > input::placeholder {
+    color: #333;
+    transform: translateY(6px);
+    font-size: 1.2em;
+}
+
 .container-buttons {
     display: flex;
     flex-direction: row; 
