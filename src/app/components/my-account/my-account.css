@@ -88,3 +88,168 @@
     background-color: #bba486;
     border: none;
 }
+
+@media (min-width: 390px) and (max-width: 430px) {
+    :host {
+        height: 450px;
+    }
+
+    .container-third > label {
+        font-size: 1.4em;
+    } 
+
+    .container-third > input {
+        height: 50px;
+        font-size: 1.3em;
+    }
+
+    .container-buttons  {
+        margin-top: 15px;
+        height: 50px;
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 344px) and (max-width: 344px) {
+    :host {
+        width: 290px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 853px) {
+    :host {
+        width: 500px;
+        height: 570px;
+    }
+
+    .title {
+        font-size: 2.5em;
+    }
+
+    .container-third > label {
+        font-size: 1.7em;
+        margin-left: 5px;
+    }
+
+    .container-second {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .container-third > input {
+        height: 60px;
+        font-size: 1.7em;
+    }
+
+    .container-buttons {
+        margin-top: 30px;
+        height: 70px;
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 912px) and (max-width: 1024px) {
+    :host {
+        width: 500px;
+        height: 600px;
+    }
+
+    .title {
+        font-size: 2.9em;
+    }
+
+    .container-third > label {
+        font-size: 1.9em;
+        margin-left: 5px;
+    }
+
+    .container-second {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 20px;
+    }
+
+    .container-third > input {
+        height: 60px;
+        font-size: 1.7em;
+    }
+
+    .container-buttons {
+        margin-top: 30px;
+        height: 70px;
+        font-size: 1.5em;
+    }
+}
+
+@media (min-height: 600px) and (max-height: 600px) {
+    :host {
+        width: 500px;
+        height: 500px;
+    }
+
+    .title {
+        font-size: 2.4em;
+    }
+
+    .container-third > label {
+        font-size: 1.5em;
+        margin-left: 5px;
+    }
+
+    .container-second {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        transform: translateY(-10px);
+    }
+
+    .container-third > input {
+        height: 55px;
+        font-size: 1.4em;
+    }
+
+    .container-buttons {
+        display: flex;
+        flex-direction: column;
+        height: 60px;
+        transform: translateY(-25px);
+        font-size: 1.3em;
+    }
+}
+
+@media (min-height: 800px) and (max-height: 800px) {
+    :host {
+        width: 500px;
+        height: 500px;
+    }
+
+    .title {
+        font-size: 2.4em;
+    }
+
+    .container-third > label {
+        font-size: 1.5em;
+        margin-left: 5px;
+    }
+
+    .container-second {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        transform: translateY(-10px);
+    }
+
+    .container-third > input {
+        height: 55px;
+        font-size: 1.4em;
+    }
+
+    .container-buttons {
+        display: flex;
+        flex-direction: column;
+        height: 65px;
+        font-size: 1.3em;
+    }
+}
