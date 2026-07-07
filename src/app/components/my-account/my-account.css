@@ -87,6 +87,7 @@
     text-align: center;
     background-color: #bba486;
     border: none;
+    -webkit-appearance: none;
 }
 
 @media (min-width: 390px) and (max-width: 430px) {
@@ -253,3 +254,45 @@
         font-size: 1.3em;
     }
 }
+
+@media (min-width: 1290px) {
+    :host {
+        width: 500px;
+        height: 550px;
+    }
+
+    .title {
+        font-size: 2.4em;
+    }
+
+    .container-third > label {
+        font-size: 1.5em;
+        margin-left: 5px;
+    }
+
+    .container-second {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transform: translateY(10px);
+    }
+
+    .container-third > input {
+        height: 55px;
+        font-size: 1.4em;
+    }
+
+    .container-buttons {
+        display: flex;
+        flex-direction: column;
+        height: 120px;
+        font-size: 1.3em;
+        transform: translateY(20px);
+    }
+
+    .container-buttons button[type="button"]:hover,
+    .container-buttons button[type="submit"]:hover {
+        background-color: #b57d34;
+        cursor: pointer;
+    }
+} 
