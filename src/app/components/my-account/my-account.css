@@ -72,7 +72,7 @@
 
 .container-third > input::placeholder {
     color: #333;
-    transform: translateY(6px);
+    transform: translateY(5.9px);
     font-size: 1.2em;
 }
 
@@ -123,6 +123,11 @@
         height: 50px;
         font-size: 1.2em;
     }
+
+    .container-third > input::placeholder {
+        transform: translateY(7px);
+        font-size: 1.2em;
+    }
 }
 
 @media (min-width: 344px) and (max-width: 344px) {
@@ -155,6 +160,11 @@
     .container-third > input {
         height: 60px;
         font-size: 1.7em;
+    }
+
+    .container-third > input::placeholder {
+        transform: translateY(8.5px);
+        font-size: 1.2em;
     }
 
     .container-buttons {
@@ -191,6 +201,11 @@
         font-size: 1.7em;
     }
 
+    .container-third > input::placeholder {
+        transform: translateY(8.5px);
+        font-size: 1.2em;
+    }
+
     .container-buttons {
         margin-top: 30px;
         height: 70px;
@@ -223,6 +238,11 @@
     .container-third > input {
         height: 55px;
         font-size: 1.4em;
+    }
+
+    .container-third > input::placeholder {
+        transform: translateY(7px);
+        font-size: 1.2em;
     }
 
     .container-buttons {
@@ -261,6 +281,11 @@
         font-size: 1.4em;
     }
 
+    .container-third > input::placeholder {
+        transform: translateY(7px);
+        font-size: 1.2em;
+    }
+
     .container-buttons {
         display: flex;
         flex-direction: column;
@@ -294,6 +319,11 @@
     .container-third > input {
         height: 55px;
         font-size: 1.4em;
+    }
+
+    .container-third > input::placeholder {
+        transform: translateY(7.5px);
+        font-size: 1.2em;
     }
 
     .container-buttons {

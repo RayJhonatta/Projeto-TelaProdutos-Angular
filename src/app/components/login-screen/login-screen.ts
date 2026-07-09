@@ -66,7 +66,6 @@ export class LoginScreen {
     if (this.data.valid) {
       const newRegister: NewLogin = this.data.value as NewLogin;
 
-      // Mantemos o seu método addLogin para Cadastrar
       this.loginService.addLogin(newRegister).subscribe({
         next: (resposta: any) => { 
           this.snackBar.open('Cadastro realizado com sucesso!!', 'Fechar', {
