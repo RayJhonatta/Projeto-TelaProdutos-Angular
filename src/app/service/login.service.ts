@@ -2,6 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
 import { Login, LoginRequest, NewLogin } from "../models/login.model";
 import { Observable, tap } from 'rxjs';
+import { environment } from "../../environments/environment";
 
 @Injectable({
     providedIn: 'root'
@@ -11,10 +12,7 @@ export class LoginService {
     private http = inject(HttpClient);
 
     private getBaseUrl(): string {
-        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-        return isLocal 
-            ? 'http://127.0.0.1:8000/api' 
-            : 'https://projeto-telaprodutos-laravel-production.up.railway.app/api';
+        return environment.apiUrl;
     }
 
     login(login: LoginRequest): Observable<Login> {
