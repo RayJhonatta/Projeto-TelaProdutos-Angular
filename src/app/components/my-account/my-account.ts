@@ -4,6 +4,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { inject } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { LoginService } from '../../service/login.service';
 
 
@@ -11,7 +12,8 @@ import { LoginService } from '../../service/login.service';
   selector: 'app-my-account',
   imports: [
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   templateUrl: './my-account.html',
   styleUrl: './my-account.css',
@@ -31,16 +33,23 @@ export class MyAccount implements OnInit {
 
   userData() {
     const loggedInEmail = localStorage.getItem('studyflow_token');
+    console.log('Buscando dados para o e-mail:', loggedInEmail);
 
     this.loginService.getLogin().subscribe({
       next: (users: any[]) => {
+        console.log('Lista de usuários recebida com sucesso:', users);
         const user = users.find(u => u.email === loggedInEmail); 
 
         if(user) {
           this.name = user.name;
           this.email = user.email;
           this.cdr.detectChanges();
+        } else {
+          console.warn('E-mail correspondente não foi encontrado no banco.');
         }
+      },
+      error: (err) => {
+        console.error('Erro de requisição na API:', err);
       }
     });
   }
