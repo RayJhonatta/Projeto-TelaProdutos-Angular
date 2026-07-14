@@ -65,6 +65,9 @@ export class LoginScreen {
 
     if (this.data.valid) {
       const newRegister: NewLogin = this.data.value as NewLogin;
+      
+      localStorage.setItem('studyflow_token', newRegister.email);
+      localStorage.setItem('studyflow_user_name', newRegister.name);
 
       this.loginService.addLogin(newRegister).subscribe({
         next: (resposta: any) => { 
@@ -74,24 +77,28 @@ export class LoginScreen {
             verticalPosition: 'top'
           });
 
-          if (resposta && resposta.token) {
-            localStorage.setItem('studyflow_token', resposta.token);
-          } else {
-            localStorage.setItem('studyflow_token', 'token_temporario_cadastro'); 
+          if (resposta && resposta.email) {
+            localStorage.setItem('studyflow_token', resposta.email);
+            localStorage.setItem('studyflow_user_name', resposta.name || newRegister.name);
           }
-
-          this.data.reset();
-          this.router.navigate(['/dashboard']);
         },
         error: (err) => {
           console.error('Erro ao cadastrar:', err);
+          
+          localStorage.removeItem('studyflow_token');
+          localStorage.removeItem('studyflow_user_name');
+          
           this.snackBar.open('Erro ao realizar cadastro!! Já existe um usuário com esses dados!!', 'Fechar', {
             duration: 3000,
             horizontalPosition: 'center',
             verticalPosition: 'top'
           });
+          this.router.navigate(['/login']);
         }
       });
+
+      this.data.reset();
+      this.router.navigate(['/dashboard']);
     }
   }
 
