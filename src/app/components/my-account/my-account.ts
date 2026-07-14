@@ -36,7 +36,7 @@ export class MyAccount implements OnInit {
     const loggedInName = localStorage.getItem('studyflow_user_name');
     console.log('Buscando dados para o e-mail:', loggedInEmail);
 
-    if (loggedInEmail) {
+    if (loggedInEmail && loggedInEmail.includes('@')) {
       this.email = loggedInEmail;
       this.name = loggedInName || '';
       this.cdr.detectChanges(); 
@@ -45,11 +45,12 @@ export class MyAccount implements OnInit {
     this.loginService.getLogin().subscribe({
       next: (users: any[]) => {
         console.log('Lista de usuários recebida com sucesso:', users);
-        const user = users.find(u => u.email === loggedInEmail); 
+        const user = users.find(u => u.email === loggedInEmail || u.name === loggedInName);
 
         if(user) {
           this.name = user.name;
           this.email = user.email;
+          localStorage.setItem('studyflow_token', user.email);
           localStorage.setItem('studyflow_user_name', user.name);
           this.cdr.detectChanges();
         } else {
