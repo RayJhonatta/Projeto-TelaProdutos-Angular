@@ -33,7 +33,14 @@ export class MyAccount implements OnInit {
 
   userData() {
     const loggedInEmail = localStorage.getItem('studyflow_token');
+    const loggedInName = localStorage.getItem('studyflow_user_name');
     console.log('Buscando dados para o e-mail:', loggedInEmail);
+
+    if (loggedInEmail) {
+      this.email = loggedInEmail;
+      this.name = loggedInName || '';
+      this.cdr.detectChanges(); 
+    }
 
     this.loginService.getLogin().subscribe({
       next: (users: any[]) => {
@@ -43,6 +50,7 @@ export class MyAccount implements OnInit {
         if(user) {
           this.name = user.name;
           this.email = user.email;
+          localStorage.setItem('studyflow_user_name', user.name);
           this.cdr.detectChanges();
         } else {
           console.warn('E-mail correspondente não foi encontrado no banco.');

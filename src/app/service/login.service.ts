@@ -20,6 +20,7 @@ export class LoginService {
             tap((response: any) => {
                 if (response && response.email) {
                     localStorage.setItem('studyflow_token', response.email);
+                    localStorage.setItem('studyflow_user_name', response.name || '');
                 }
                 console.log('Resposta real do Laravel:', response);
             })
@@ -28,6 +29,7 @@ export class LoginService {
 
     logout(): void {
         localStorage.removeItem('studyflow_token');
+        localStorage.removeItem('studyflow_user_name');
     }
 
     getLogin(): Observable<Login[]> {
@@ -35,7 +37,15 @@ export class LoginService {
     }
     
     addLogin(login: NewLogin): Observable<Login> {
-        return this.http.post<Login>(`${this.getBaseUrl()}/person`, login);
+        return this.http.post<Login>(`${this.getBaseUrl()}/person`, login).pipe(
+            tap((response: any) => {
+                if (response && response.email) {
+                    localStorage.setItem('studyflow_token', response.email);
+                    localStorage.setItem('studyflow_user_name', response.name || '');
+                }
+                console.log('Cadastro realizado com sucesso:', response);
+            })
+        );
     }
     
     updateLogin(login: Login): Observable<Login> {
