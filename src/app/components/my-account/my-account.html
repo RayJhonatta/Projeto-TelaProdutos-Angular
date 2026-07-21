@@ -18,11 +18,12 @@
             </div>
             <div class="container-third">
                 <label for="">Senha:</label>
-                <input type="text" name="password" id="password" placeholder="********">
+                <input type="text" name="password" [(ngModel)]="password" placeholder="********">
             </div>
         </div>
         <div class="container-buttons">
-            <button type="submit" class="submit">Salvar</button>
+            <button type="submit" class="submit"
+            [disabled]="!hasChanges()" (click)="savingData()">Salvar</button>
             <button type="button" class="button" (click)='closeModal()'>Cancelar</button>
         </div>
     </div>
