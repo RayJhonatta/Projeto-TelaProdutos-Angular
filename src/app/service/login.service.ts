@@ -19,6 +19,7 @@ export class LoginService {
         return this.http.post<Login>(`${this.getBaseUrl()}/login`, login).pipe(
             tap((response: any) => {
                 if (response && response.email) {
+                    localStorage.setItem('studyflow_user_id', response.id);
                     localStorage.setItem('studyflow_token', response.email);
                     localStorage.setItem('studyflow_user_name', response.name || '');
                 }
@@ -28,6 +29,7 @@ export class LoginService {
     }
 
     logout(): void {
+        localStorage.removeItem('studyflow_user_id');
         localStorage.removeItem('studyflow_token');
         localStorage.removeItem('studyflow_user_name');
     }
@@ -40,6 +42,7 @@ export class LoginService {
         return this.http.post<Login>(`${this.getBaseUrl()}/person`, login).pipe(
             tap((response: any) => {
                 if (response && response.email) {
+                    localStorage.setItem('studyflow_user_id', response.id);
                     localStorage.setItem('studyflow_token', response.email);
                     localStorage.setItem('studyflow_user_name', response.name || '');
                 }

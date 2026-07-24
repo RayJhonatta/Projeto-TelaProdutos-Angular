@@ -120,13 +120,13 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    gap: 12px;          
-    font-size: 0.7em;
+    gap: 3px;          
+    font-size: 0.6em;
     color: #8C8275;
     border: 1px solid #bba486;
     border-radius: 10px;
     width: 100px;
-    height: 70px;
+    height: 80px;
 }
 
 .menu-dropdown > .my-accont {
@@ -147,15 +147,24 @@
     color: white;
 }
 
-.menu-dropdown > .exit {
+.menu-dropdown > .delete {
     color: red;
+    margin-left: 11px;
+}
+
+.menu-dropdown > .delete:active {
+    color: #c0392b;
+}
+
+.menu-dropdown > .exit {
+    color: #bba486;
     text-align: center;
     margin: -5px;
 }
 
 .menu-dropdown > .exit:active {
     text-decoration: underline;
-    color: black;
+    color: #e0e0e0;
 }
 
 @media (min-width: 319px) and (max-width: 319px) {
@@ -260,25 +269,32 @@
 
     .account > .div-text-profile > details > .menu-dropdown {
         width: 150px;
-        height: 80px;
+        height: 120px;
         position: absolute;
         top: 40px;   
         left: -35px;  
         border: 2px solid #bba486; 
+        display: flex;
+        gap: 15px;
     }
 
     .account > .div-text-profile > details > .menu-dropdown > .my-accont {
         height: 30px;
         width: 100px;
-        font-size: 1.2em;
-        margin-left: 27px;
+        font-size: 1.6em;
+        margin-left: 25px;
+        margin-top: 11px;
         padding-top: 4px;
         border-radius: 10px;
     }
 
+    .account > .div-text-profile > details > .menu-dropdown > .delete {
+        font-size: 1.6em;
+        margin-left: 15px;
+    }
+
     .account > .div-text-profile > details > .menu-dropdown > .exit {
-        font-size: 1.2em;
-        margin-left: 1px !important;
+        font-size: 1.6em;
         text-align: center;
     }
 
@@ -350,26 +366,33 @@
 
     .account > .div-text-profile > details > .menu-dropdown {
         width: 210px;
-        height: 100px;
+        height: 130px;
         position: absolute;
         top: 40px;   
         left: -55px;  
         border: 2px solid #bba486; 
+        display: flex;
+        gap: 6px;
     }
 
     .account > .div-text-profile > details > .menu-dropdown > .my-accont {
         height: 40px;
         width: 120px;
         font-size: 1.8em;
-        margin-left: 50px;
+        margin-left: 45px;
         padding-top: 9px;
         border-radius: 10px;
     }
 
+    .account > .div-text-profile > details > .menu-dropdown > .delete {
+        font-size: 1.8em;
+        margin-top: 9px;
+        margin-left: 37px;
+    } 
+
     .account > .div-text-profile > details > .menu-dropdown > .exit {
         font-size: 1.8em;
         margin-top: 5px;
-        margin-left: 5px;
     }
 
     .account > .div-text-profile > details > .menu-dropdown > .exit:active {
@@ -469,25 +492,33 @@
 
     .account > .div-text-profile > details > .menu-dropdown {
         width: 340px;
-        height: 100px;
+        height: 130px;
         position: absolute;
         top: 40px;   
         left: -117px;  
         border: 2px solid #bba486; 
+        display: flex;
+        gap: 5px;
     }
 
     .account > .div-text-profile > details > .menu-dropdown > .my-accont {
         height: 40px;
         width: 120px;
         font-size: 1.8em;
-        margin-left: 110px;
+        margin-left: 114px;
         padding-top: 9px;
         border-radius: 10px;
     }
 
+    .account > .div-text-profile > details > .menu-dropdown > .delete {
+        font-size: 1.8em;
+        text-align: center;
+        margin-top: 10px;
+    }
+
     .account > .div-text-profile > details > .menu-dropdown > .exit {
         font-size: 1.8em;
-        margin-top: 5px;
+        margin-top: 7px;
         margin-left: 5px;
     }
 
@@ -553,25 +584,36 @@
 
     .account > .div-text-profile > details > .menu-dropdown {
         width: 210px;
-        height: 100px;
+        height: 130px;
         position: absolute;
         top: 40px;   
         left: -55px; 
         border: 2px solid #bba486; 
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        align-items: center;
     }
 
     .account > .div-text-profile > details > .menu-dropdown > .my-accont {
-        height: 40px;
+        height: 60px;
         width: 120px;
         font-size: 1.8em;
-        margin-left: 47px;
-        padding-top: 9px;
+        margin-left: 10px;
+        padding-top: 8px;
         border-radius: 10px;
     }
 
+    .account > .div-text-profile > details > .menu-dropdown > .delete {
+        font-size: 1.8em;
+        margin-top: 2px;
+        margin-bottom: 7px;
+        text-align: center;
+    }
+
+
     .account > .div-text-profile > details > .menu-dropdown > .exit {
         font-size: 1.8em;
-        margin-top: 5px;
         margin-left: 2px;
         margin-bottom: 10px;
     }
@@ -640,25 +682,32 @@
 
     .account > .div-text-profile > details > .menu-dropdown {
         width: 270px;
-        height: 100px;
+        height: 140px;
         position: absolute;
         top: 40px;   
         left: -85px; 
         border: 2px solid #bba486; 
+        display: flex;
+        gap: 10px;
     }
 
     .account > .div-text-profile > details > .menu-dropdown > .my-accont {
         height: 40px;
         width: 120px;
-        font-size: 1.8em;
+        font-size: 2em;
         margin-left: 76px;
         padding-top: 9px;
     }
 
+    .account > .div-text-profile > details > .menu-dropdown > .delete {
+        font-size: 2em;
+        margin-top: 8px;
+        margin-left: 62px;
+    }
+
     .account > .div-text-profile > details > .menu-dropdown > .exit {
-        font-size: 1.8em;
+        font-size: 2em;
         margin-top: 5px;
-        margin-left: 2px;
         margin-bottom: 10px;
     }
     
@@ -767,11 +816,13 @@
 
     .account > .div-text-profile > details > .menu-dropdown {
         width: 210px;
-        height: 110px;
+        height: 140px;
         position: absolute;
         left: 150px;
         top: -80px;
         border: 2px solid #bba486; 
+        display: flex;
+        gap: 7px;
     }
 
     .account > .div-text-profile > details > .menu-dropdown > .my-accont {
@@ -787,6 +838,19 @@
     .account > .div-text-profile > details > .menu-dropdown > .my-accont:hover {
         background-color: #9d886f;
         color: white;
+    }
+
+    .account > .div-text-profile > details > .menu-dropdown > .delete {
+        font-size: 1.8em;
+        text-align: center;
+        margin-top: 9px;
+        margin-right: 3px;
+    }
+
+    .account > .div-text-profile > details > .menu-dropdown > .delete:hover {
+        color: rgb(176, 6, 6);
+        cursor: pointer;
+        text-decoration: underline;
     }
 
     .account > .div-text-profile > details > .menu-dropdown > .exit {
