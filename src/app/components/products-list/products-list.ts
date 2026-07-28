@@ -21,6 +21,7 @@ export class ProductsList implements OnInit {
   private dialog = inject(MatDialog);
   private loginService = inject(LoginService);
   userId!: number;
+  getName = localStorage.getItem('studyflow_user_name');
 
   ngOnInit(): void {
     //

@@ -35,7 +35,7 @@
                 <details>
                     <summary class="profile">Ver perfil</summary>
                     <div class="menu-dropdown">
-                        <span class="my-accont" (click)="openModal()">Minha conta</span>
+                        <span class="my-accont" (click)="openModal()">Minha Conta</span>
                         <span class="delete" (click)="deleteAccount()">Excluir minha conta</span>
                         <span class="exit" (click)="exit()">Sair</span>
                     </div>
@@ -43,4 +43,11 @@
             </div>
         </div>
     </header>
+    <body>
+        <div class="text-welcome">
+            <h1 class="title-welcome">Olá, {{ getName }}! <span class="material-icons icons-text-welcome">waving_hand</span></h1>
+            <span class="paragraph-welcome">Bem-vindo de Volta! Organize seus estudos, acompanhe seu progresso e alcance seus objetivos.</span>
+        </div>
+        
+    </body>
 </html>
