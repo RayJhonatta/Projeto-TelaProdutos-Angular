@@ -870,7 +870,7 @@
         flex-direction: column;
         justify-content: flex-start;
         padding-top: 20px;
-        gap: 30px;
+        gap: 15px;
         border-right: 1px solid #D1D1D1;
         z-index: 10;
     }
@@ -888,36 +888,41 @@
     .div-title-icon {
         display: flex;
         flex-direction: row;
-        gap: 20px;
-        justify-content: center;
+        gap: 15px;
+        justify-content: flex-start;
         align-items: center;
         margin-top: 10px;
-        margin-right: 50px;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        padding: 10px 20px;
         background-color: transparent;
+        width: 80%;
+        border-radius: 12px;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+   
     }
 
     .nav > .div-title-icon:nth-child(3),
     .nav > .div-title-icon:nth-child(4) {
-        margin-right: 65px;
+        margin-right: 0 !important;
     }
 
     .div-title-icon > .icons {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: #A38664;
         font-size: 2.5em;
+        width: 40px; 
+        text-align: center;
     }
 
     .div-title-icon:hover {
         background-color: #E8E2D5;
-        border-radius: 12px;    
         cursor: pointer;           
-        transition: all 0.4s ease;
-        width: 200px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 50px;
+        width: 80%;
+        height: auto;
     }
 
     .div-title-icon:hover .nav-item,
@@ -927,6 +932,7 @@
 
     .div-title-icon > .nav-item {
         font-size: 1.3em;
+        list-style: none;
     }
 
     .div-title-icon > .nav-item:active {

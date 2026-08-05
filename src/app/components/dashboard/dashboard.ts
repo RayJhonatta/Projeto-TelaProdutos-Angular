@@ -8,15 +8,15 @@ import { Login } from '../../models/login.model';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-products-list',
+  selector: 'app-dashboard',
   standalone: true,
   imports: [
     MatDialogModule
   ],
-  templateUrl: './products-list.html',
-  styleUrl: './products-list.css',
+  templateUrl: './dashboard.html',
+  styleUrl: './dashboard.css',
 })
-export class ProductsList implements OnInit {
+export class Dashboard implements OnInit {
   private router = inject(Router);
   private dialog = inject(MatDialog);
   private loginService = inject(LoginService);
@@ -28,7 +28,23 @@ export class ProductsList implements OnInit {
   }
 
   exit() {
-    this.router.navigate(['/login']);
+    Swal.fire({
+      title: 'Tem certeza?',
+      text: `Tem certeza que deseja sair da sua conta??`,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#9d886f',
+      cancelButtonColor: '#6c757d',
+      confirmButtonText: 'Sim, sair da conta!',
+      cancelButtonText: 'Cancelar',
+      iconColor: '#9d886f'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        localStorage.removeItem('studyflow_token');
+        localStorage.removeItem('studyflow_user_name');
+          this.router.navigate(['/login']);
+      }
+    }) 
   }
 
   openModal() {
@@ -61,6 +77,8 @@ export class ProductsList implements OnInit {
                 icon: 'success',
                 confirmButtonColor: '#bba486'
               }).then(() => {
+                localStorage.removeItem('studyflow_token');
+                localStorage.removeItem('studyflow_user_name');
                 this.router.navigate(['/login']);
               })
           }

@@ -1,17 +1,17 @@
 import { Component, Inject, inject } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
-import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { CommonModule } from '@angular/common';
-import { ProductsList } from '../products-list/products-list';
+import { Dashboard } from '../dashboard/dashboard';
 import { Router } from '@angular/router';
 import { Login, NewLogin  } from '../../models/login.model';
 import { LoginService } from '../../service/login.service';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login-screen',
   standalone: true,
-  imports: [MatSnackBarModule, ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './login-screen.html',
   styleUrls: ['./login-screen.css'],
 })
@@ -19,7 +19,6 @@ export class LoginScreen {
 
   hidePassword: boolean = false;
   private getData = inject(FormBuilder);
-  private snackBar = inject(MatSnackBar);
   private http = inject(HttpClient);
   private router = inject(Router);
   private loginService = inject(LoginService);
@@ -46,41 +45,46 @@ export class LoginScreen {
     event.preventDefault();
 
     if (this.data.value.name === '' || this.data.value.email === '' || this.data.value.password === '') {
-      this.snackBar.open('Campos obrigatórios não preenchidos!!', 'Fechar', {
-        duration: 3000,
-        horizontalPosition: 'center',
-        verticalPosition: 'top'
+      Swal.fire({
+        icon: 'warning',
+        title: 'Atenção',
+        text: 'Campos obrigatórios não preenchidos!!',
+        confirmButtonColor: '#9d886f'
       });
       return;
     }
 
     if (this.data.invalid) {
-      this.snackBar.open('Dados estão inválidos!! Por favor verifique os dados novamente!!', 'Fechar', {
-        duration: 3000,
-        horizontalPosition: 'center',
-        verticalPosition: 'top'
+      Swal.fire({
+        icon: 'warning',
+        title: 'Dados inválidos',
+        text: 'Dados estão inválidos!! Por favor verifique os dados novamente!!',
+        confirmButtonColor: '#9d886f'
       });
       return; 
     } 
 
     if (this.data.valid) {
       const newRegister: NewLogin = this.data.value as NewLogin;
-      
-      localStorage.setItem('studyflow_token', newRegister.email);
-      localStorage.setItem('studyflow_user_name', newRegister.name);
 
       this.loginService.addLogin(newRegister).subscribe({
         next: (resposta: any) => { 
-          this.snackBar.open('Cadastro realizado com sucesso!!', 'Fechar', {
-            duration: 3000,
-            horizontalPosition: 'center',
-            verticalPosition: 'top'
+          const token = (resposta && resposta.email) ? resposta.email : newRegister.email;
+          const name = (resposta && resposta.name) ? resposta.name : newRegister.name;
+
+          localStorage.setItem('studyflow_token', token);
+          localStorage.setItem('studyflow_user_name', name);
+          
+          Swal.fire({
+            icon: 'success',
+            title: 'Sucesso!',
+            text: 'Cadastro realizado com sucesso!!',
+            timer: 3000,
+            showConfirmButton: false
           });
 
-          if (resposta && resposta.email) {
-            localStorage.setItem('studyflow_token', resposta.email);
-            localStorage.setItem('studyflow_user_name', resposta.name || newRegister.name);
-          }
+          this.data.reset();
+          this.router.navigate(['/dashboard']);
         },
         error: (err) => {
           console.error('Erro ao cadastrar:', err);
@@ -88,17 +92,14 @@ export class LoginScreen {
           localStorage.removeItem('studyflow_token');
           localStorage.removeItem('studyflow_user_name');
           
-          this.snackBar.open('Erro ao realizar cadastro!! Já existe um usuário com esses dados!!', 'Fechar', {
-            duration: 3000,
-            horizontalPosition: 'center',
-            verticalPosition: 'top'
+          Swal.fire({
+            icon: 'error',
+            title: 'Erro',
+            text: 'Erro ao realizar cadastro!! Já existe um usuário com esses dados!!',
+            confirmButtonColor: '#9d886f'
           });
-          this.router.navigate(['/login']);
         }
       });
-
-      this.data.reset();
-      this.router.navigate(['/dashboard']);
     }
   }
 
