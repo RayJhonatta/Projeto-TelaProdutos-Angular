@@ -44,23 +44,22 @@
     display: none;
 }
 
-.div-title-icon > .nav-item:active {
+.div-title-icon.active-tab {
     background-color: #efdfd0;
-    border: 1px solid;
-    border-color: #98672b;
-    width: 70px;
+    border: 1px solid #98672b;
+    border-radius: 5px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
+    padding: 0 10px;
 }
 
-.nav > .div-title-icon:nth-child(3) > .nav-item:active {
+.nav > .div-title-icon:nth-child(3).active-tab {
     width: 60px;
 }
 
-.nav > .div-title-icon:nth-child(4) > .nav-item:active {
+.nav > .div-title-icon:nth-child(4).active-tab {
     width: 60px;
 }
 
@@ -204,15 +203,14 @@
     .nav {
         font-size: 0.8em;
     }
-
     
-    .nav > .div-title-icon:nth-child(3) > .nav-item:active,
-    .nav > .div-title-icon:nth-child(4) > .nav-item:active {
+    .nav > .div-title-icon:nth-child(3).active-tab,
+    .nav > .div-title-icon:nth-child(4).active-tab {
         width: 50px;
     }
 
-    .nav > .div-title-icon:nth-child(2) > .nav-item:active,
-    .nav > .div-title-icon:nth-child(5) > .nav-item:active {
+    .nav > .div-title-icon:nth-child(2).active-tab,
+    .nav > .div-title-icon:nth-child(5).active-tab {
         width: 60px;
     }
 
@@ -226,8 +224,8 @@
         font-size: 1em;
     }
 
-    .nav > .div-title-icon:nth-child(2) > .nav-item:active, 
-    .nav > .div-title-icon:nth-child(5) > .nav-item:active {
+    .nav > .div-title-icon:nth-child(2).active-tab, 
+    .nav > .div-title-icon:nth-child(5).active-tab {
         width: 75px;
     }
 
@@ -241,8 +239,8 @@
 }
 
 @media (min-width: 414px) and (max-width: 414px) {
-    .nav > .div-title-icon:nth-child(2) > .nav-item:active,
-    .nav > .div-title-icon:nth-child(5) > .nav-item:active  {
+    .nav > .div-title-icon:nth-child(2).active-tab,
+    .nav > .div-title-icon:nth-child(5).active-tab  {
         width: 75px;
     }
 
@@ -256,13 +254,24 @@
     }
 }
 
+@media (min-width: 440px) and (max-width: 440px) {
+    .nav {
+        font-size: 1.1em;
+    }
+
+    .nav > .div-title-icon:nth-child(2).active-tab,
+    .nav > .div-title-icon:nth-child(5).active-tab {
+        width: 75px;
+    }
+}
+
 @media (min-width: 540px) and (max-width: 540px) {
     .nav {
         height: 70px;
-        font-size: 1.3em;
+        font-size: 1.4em;
     }
 
-    .div-title-icon > .nav-item:active {
+    .div-title-icon.active-tab {
         background-color: #efdfd0;
         border: 2px solid;
         border-color: #98672b;
@@ -274,11 +283,11 @@
         border-radius: 10px;
     }
 
-    .nav > .div-title-icon:nth-child(3) > .nav-item:active {
+    .nav > .div-title-icon:nth-child(3).active-tab {
         width: 85px;
     }
 
-    .nav > .div-title-icon:nth-child(4) > .nav-item:active {
+    .nav > .div-title-icon:nth-child(4).active-tab {
         width: 80px;
     }
 
@@ -379,12 +388,12 @@
         justify-content: space-evenly;
     }
 
-    .nav > .div-title-icon:nth-child(3) > .nav-item:active, 
-    .nav > .div-title-icon:nth-child(4) > .nav-item:active  {
+    .nav > .div-title-icon:nth-child(3).active-tab, 
+    .nav > .div-title-icon:nth-child(4).active-tab  {
         width: 115px;
     }
     
-    .div-title-icon > .nav-item:active {
+    .div-title-icon.active-tab {
         background-color: #efdfd0;
         border: 2px solid;
         border-color: #98672b;
@@ -500,7 +509,7 @@
         align-items: center;
     }
 
-    .div-title-icon:active {
+    .div-title-icon.active-tab {
         background-color: #efdfd0;
         border: 2px solid;
         border-color: #98672b;
@@ -518,31 +527,21 @@
         color: #A38664;
     }
 
-    .div-title-icon > .icons:active {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .nav > .div-title-icon:nth-child(2) > .nav-item:active,
-    .nav > .div-title-icon:nth-child(3) > .nav-item:active,
-    .nav > .div-title-icon:nth-child(4) > .nav-item:active,
-    .nav > .div-title-icon:nth-child(5) > .nav-item:active {
+    .nav > .div-title-icon:nth-child(2).active-tab,
+    .nav > .div-title-icon:nth-child(3).active-tab,
+    .nav > .div-title-icon:nth-child(4).active-tab,
+    .nav > .div-title-icon:nth-child(5).active-tab {
         width: 130px;
         border: none;
     }
 
-    .nav > .div-title-icon:nth-child(3):active,
-    .nav > .div-title-icon:nth-child(4):active {
+    .nav > .div-title-icon:nth-child(3).active-tab,
+    .nav > .div-title-icon:nth-child(4).active-tab {
         width: 180px;
         display: flex;
         padding-right: 20px;
         padding-left: 20px;
     } 
-
-    .nav-item:nth-of-type(3):active {
-        width: 120px;
-    }
 
     .nav > .div-logo {
         margin-right: 15%;
@@ -637,7 +636,7 @@
         gap: 50px;
     }
 
-    .div-title-icon > .nav-item:active {
+    .div-title-icon.active-tab {
         background-color: #efdfd0;
         border: 2px solid;
         border-color: #98672b;
@@ -649,8 +648,8 @@
         border-radius: 10px;    
     }
 
-    .nav > .div-title-icon:nth-child(3) > .nav-item:active,
-    .nav > .div-title-icon:nth-child(4) > .nav-item:active {
+    .nav > .div-title-icon:nth-child(3).active-tab,
+    .nav > .div-title-icon:nth-child(4).active-tab {
         width: 120px;
     }
 
@@ -753,7 +752,7 @@
         gap: 30px;
     }
 
-    .div-title-icon > .nav-item:active {
+    .div-title-icon.active-tab {
         background-color: #efdfd0;
         border: 2px solid;
         border-color: #98672b;
@@ -765,8 +764,8 @@
         border-radius: 10px;    
     }
 
-    .nav > .div-title-icon:nth-child(3) > .nav-item:active,
-    .nav > .div-title-icon:nth-child(4) > .nav-item:active {
+    .nav > .div-title-icon:nth-child(3).active-tab,
+    .nav > .div-title-icon:nth-child(4).active-tab {
         width: 130px;
     }
 
@@ -900,7 +899,18 @@
         border-radius: 12px;
         box-sizing: border-box;
         transition: all 0.3s ease;
-   
+    }
+    
+    .div-title-icon.active-tab {
+        background-color: #E8E2D5;
+        width: 80%;
+        height: auto;
+        border: none;
+    }
+
+    .div-title-icon.active-tab .nav-item,
+    .div-title-icon.active-tab .icons {
+        color: #8C6239; 
     }
 
     .nav > .div-title-icon:nth-child(3),
@@ -933,10 +943,6 @@
     .div-title-icon > .nav-item {
         font-size: 1.3em;
         list-style: none;
-    }
-
-    .div-title-icon > .nav-item:active {
-        border: none;
     }
 
     .header > .account {
