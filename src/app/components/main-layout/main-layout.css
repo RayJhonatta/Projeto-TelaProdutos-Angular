@@ -530,21 +530,20 @@
         color: #A38664;
     }
 
-    /* LARGURAS ESPECÍFICAS PARA CADA ABA ATIVA (SEM border: none) */
     .nav > .div-title-icon:nth-child(2).active-tab {
-        width: 220px; /* Dashboard */
+        width: 220px; 
     }
 
     .nav > .div-title-icon:nth-child(3).active-tab {
-        width: 190px; /* Matérias */
+        width: 190px; 
     }
 
     .nav > .div-title-icon:nth-child(4).active-tab {
-        width: 170px; /* Tarefas */
+        width: 170px; 
     }
 
     .nav > .div-title-icon:nth-child(5).active-tab {
-        width: 210px; /* Calendário */
+        width: 210px;
     }
 
     .nav > .div-logo {
@@ -687,14 +686,17 @@
         border: none;
     }
 
+    .nav > .div-title-icon:nth-child(2).active-tab,
+    .nav > .div-title-icon:nth-child(3).active-tab,
+    .nav > .div-title-icon:nth-child(4).active-tab,
+    .nav > .div-title-icon:nth-child(5).active-tab {
+        width: 80% !important;
+        padding: 10px 20px !important;
+    }
+
     .div-title-icon.active-tab .nav-item,
     .div-title-icon.active-tab .icons {
         color: #8C6239; 
-    }
-
-    .nav > .div-title-icon:nth-child(3),
-    .nav > .div-title-icon:nth-child(4) {
-        margin-right: 0 !important;
     }
 
     .div-title-icon > .icons {
