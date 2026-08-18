@@ -34,17 +34,28 @@
     align-items: center;
 }
 
-.div-button {
+.button-add-subject {
     display: flex;
     flex-direction: row;
+    margin-top: 10px;
 }
 
 .button {
     background-color: rgb(104, 55, 17);
     border: none;
-    width: 120px;
+    width: 130px;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 7px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.button:active {
+    background-color: #502a0d;
+    transform: scale(0.96);
 }
 
 @media (min-width: 344px) and (max-width: 360px) {
@@ -106,12 +117,37 @@
         font-size: 1.9em;
     }
 
+    .button-add-subject {
+        display: flex;
+        align-self: flex-end;
+        margin-top: 30px;
+    }
+
+    .button {
+        width: 160px;
+        height: 60px;
+        font-size: 1.7em;
+    }
+
 }
 
 @media (min-height: 1280px) and (max-height: 1280px) {
     .subject-container {
         font-size: 0.8em;
         margin-left: 30px;
+    }
+
+    .button-add-subject {
+        display: flex;
+        align-self: flex-end;
+        margin-top: 30px;
+        margin-right: 30px;
+    }
+
+    .button {
+        width: 170px;
+        height: 60px;
+        font-size: 1.7em;
     }
 }
 
@@ -133,6 +169,19 @@
 
     .subject-container > .paragraph-subject {
         font-size: 2.3em;
+    }
+
+    .button-add-subject {
+        display: flex;
+        align-self: flex-end;
+        margin-top: 30px;
+        margin-right: 100px;
+    }
+
+    .button {
+        width: 200px;
+        height: 60px;
+        font-size: 1.7em;
     }
 }
 
@@ -156,6 +205,19 @@
         font-size: 1.8em;
     }
 
+    .button-add-subject {
+        display: flex;
+        align-self: flex-end;
+        margin-top: 40px;
+        margin-right: 70px;
+    }
+
+    .button {
+        width: 190px;
+        height: 60px;
+        font-size: 1.5em;
+    }
+
 }
 
 @media (min-height: 1366px) and (max-height: 1366px) {
@@ -177,12 +239,38 @@
     .subject-container > .paragraph-subject {
         font-size: 2.1em;
     }
+
+    .button-add-subject {
+        display: flex;
+        align-self: flex-end;
+        margin-top: 30px;
+        margin-right: 60px;
+    }
+
+    .button {
+        width: 200px;
+        height: 60px;
+        font-size: 1.7em;
+    }
 }
 
 @media (min-height: 1368px) and (max-height: 1368px) {
     .subject-container {
         font-size: 0.9em;
         margin-left: 30px;
+    }
+
+    .button-add-subject {
+        display: flex;
+        align-self: flex-end;
+        margin-top: 25px;
+        margin-right: 25px;
+    }
+
+    .button {
+        width: 190px;
+        height: 60px;
+        font-size: 1.7em;
     }
 }
 
@@ -206,5 +294,23 @@
 
     .subject-container > .paragraph-subject {
         font-size: 1.6em;
+    }
+
+    .button-add-subject {
+        display: flex;
+        align-self: flex-end;
+        margin-right: 80px;
+        margin-top: -75px;
+    }
+
+    .button {
+        width: 180px;
+        height: 50px;
+        font-size: 1.7em;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        background-color: #502a0d;
     }
 }
