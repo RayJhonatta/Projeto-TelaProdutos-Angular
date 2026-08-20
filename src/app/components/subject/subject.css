@@ -106,6 +106,36 @@
     align-items: center;
 }
 
+.body-subject {
+    background-color: #F7F3ED;
+    border: 2px solid #D8C8B8;
+    transform: translateY(-30px);
+    width: 93vw;
+    border-radius: 5px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paragraph-without-task {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.pagination {
+    background-color: #F7F3ED;
+    border: 2px solid #D8C8B8;       
+    border-radius: 5px;
+    padding: 10px 16px;
+    transform: translateY(-10px);
+    width: 93vw;
+}
+
+.pagination-info {
+    color: #4A3B32;           
+}
+
 @media (min-width: 344px) and (max-width: 344px) {
     .subject-container {
         width: 90%;
@@ -142,6 +172,14 @@
     .search-bar {
         width: 240px;
     }
+
+    .paragraph-without-task {
+        font-size: 1.5em;
+    }
+
+    .pagination {
+        font-size: 1.1em;
+    }
 }
 
 @media (min-width: 414px) and (max-width: 414px) {
@@ -154,17 +192,45 @@
         width: 250px;
         height: 40px;
     }
+
+    .paragraph-without-task {
+        font-size: 1.5em;
+    }
+
+    .pagination-info {
+        font-size: 1.1em;          
+    } 
 }
 
 @media (min-width: 440px) and (max-width: 440px) {
+    .icons-subject-container {
+        font-size: 1.8em;
+    }
+
+    .title-subject {
+        font-size: 2em;
+    }
+    
+    .paragraph-subject {
+        font-size: 1.5em;
+    }
+
     .button-add-subject {
         display: flex;
         align-self: flex-end;
-        margin-top: 40px;
+        margin-top: 20px;
     }
 
     .search-bar {
         width: 270px;
+    }
+
+    .paragraph-without-task {
+        font-size: 1.5em;
+    }
+
+    .pagination {
+        font-size: 1.1em;
     }
 }
 
@@ -193,6 +259,10 @@
 
     .search-bar {
         width: 350px;
+    }
+
+    .pagination-info {
+        font-size: 1.2em;
     }
 
 }
@@ -242,6 +312,26 @@
     .text-search-bar { 
         font-size: 2em;
         margin-bottom: 1px;
+    }
+
+    .body-subject {
+        width: 95vw;
+    }
+
+    .paragraph-without-task {
+        font-size: 2em;
+    }
+
+    .pagination {
+        width: 95vw;
+        height: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .pagination-info {
+        font-size: 1.5em;
     }
 
 }
@@ -303,6 +393,14 @@
         width: 570px;
         height: 60px;
     }
+
+    .body-subject {
+        transform: translateY(-40px);
+    }
+
+    .pagination-info {
+        font-size: 1.6em;
+    }
     
 }
 
@@ -352,6 +450,26 @@
     .text-search-bar { 
         font-size: 1.7em;
         margin-bottom: 1px;
+    }
+
+    .body-subject {
+        width: 95vw;
+    }
+
+    .paragraph-without-task {
+        font-size: 1.8em;
+    }
+
+    .pagination {
+        width: 95vw;
+        height: 7vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .pagination-info {
+        font-size: 1.6em;
     }
 }
 
@@ -403,6 +521,21 @@
         margin-bottom: 1px;
     }
 
+    .paragraph-without-task {
+        font-size: 1.7em;
+    }
+
+    .pagination {
+        height: 10vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .pagination-info {
+        font-size: 1.4em;
+    }
+
 }
 
 @media (min-height: 1366px) and (max-height: 1366px) {
@@ -451,6 +584,27 @@
     .text-search-bar { 
         font-size: 1.9em;
         margin-bottom: 1px;
+    }
+
+    .body-subject {
+        width: 95vw;
+        z-index: 1;
+    }
+
+    .paragraph-without-task {
+        font-size: 2em;
+    }
+
+    .pagination {
+        width: 95vw;
+        height: 5vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .pagination-info {
+        font-size: 1.6em;
     }
 }
 
@@ -527,5 +681,26 @@
     .text-search-bar { 
         font-size: 1.6em;
         margin-top: 2px;
+    }
+
+    .body-subject {
+        width: 77vw;
+        margin-top: 90px;
+    }
+
+    .paragraph-without-task {
+        font-size: 1.6em;
+    }
+
+    .pagination {
+        width: 77vw;
+        height: 7vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .pagination-info {
+        font-size: 1.4em;
     }
 }

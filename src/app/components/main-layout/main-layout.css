@@ -97,6 +97,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 10000;
 }
 
 .div-text-profile > .profile {
@@ -125,6 +126,7 @@
     border-radius: 10px;
     width: 100px;
     height: 80px;
+    z-index: 10001;
 }
 
 .menu-dropdown > .my-accont {
@@ -736,7 +738,7 @@
         background-color: transparent; 
         border: 1px solid #c6b194;
         border-radius: 10px;
-        z-index: 100;
+        z-index: 9999 !important;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -765,7 +767,7 @@
         top: -85px;
         border: 2px solid #bba486; 
         background-color: #ffffff;
-        z-index: 200;
+        z-index: 10000 !important;
     }
 
     .account > .div-text-profile > details > .menu-dropdown > .my-accont {
