@@ -136,6 +136,30 @@
     color: #4A3B32;           
 }
 
+.info-box {
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(135deg, #F7F3ED 0%, #E9DAC7 100%);
+    border: none; 
+    width: 93vw;
+    border-radius: 5px;
+    height: 6vh;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.icon-lightbulb {
+    color: #B88F78;
+    font-size: 2em;
+    margin-bottom: 2px;
+}
+
+.messages {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
 @media (min-width: 344px) and (max-width: 344px) {
     .subject-container {
         width: 90%;
@@ -151,6 +175,14 @@
         width: 170px;
         font-size: 0.9em;
     }
+
+    .icon-lightbulb {
+        font-size: 1.7em;
+    }
+
+    .messages {
+        font-size: 0.8em;
+    }
 }
 
 @media (min-width: 360px) and (max-width: 360px) {
@@ -161,6 +193,23 @@
 
     .search-bar {
         width: 190px;
+    }
+}
+
+
+@media (min-width: 390px) and (max-width: 390px) {
+
+    .info-box {
+        display: flex;
+        gap: 0px;
+    }
+
+    .icon-lightbulb {
+        font-size: 2.5em;
+    }
+
+    .messages { 
+        font-size: 0.9em;
     }
 }
 
@@ -179,6 +228,31 @@
 
     .pagination {
         font-size: 1.1em;
+    }
+
+    .icon-lightbulb {
+        font-size: 2.6em;
+        margin-bottom: 4px;
+    }
+
+    .messages {
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 430px) and (max-width: 430px) {
+
+    .info-box {
+        display: flex;
+        gap: 1px;
+    }
+
+    .icon-lightbulb {
+        font-size: 2.7em;
+    }
+
+    .messages {
+        font-size: 1em;
     }
 }
 
@@ -200,6 +274,15 @@
     .pagination-info {
         font-size: 1.1em;          
     } 
+
+    .icon-lightbulb {
+        font-size: 2.6em;
+        margin-bottom: 4px;
+    }
+    
+    .messages {
+        font-size: 0.9em;
+    }
 }
 
 @media (min-width: 440px) and (max-width: 440px) {
@@ -232,6 +315,20 @@
     .pagination {
         font-size: 1.1em;
     }
+
+    .info-box {
+        display: flex;
+        gap: 2px;
+    }
+
+    .icon-lightbulb {
+        font-size: 2.7em;
+        margin-bottom: 4px;
+    }
+
+    .messages {
+        font-size: 1em;
+    }
 }
 
 @media (min-width: 540px) and (max-width: 540px) {
@@ -263,6 +360,15 @@
 
     .pagination-info {
         font-size: 1.2em;
+    }
+
+    .icon-lightbulb {
+        font-size: 2.3em;
+        margin-bottom: 3px;
+    }
+
+    .messages {
+        font-size: 1.1em;
     }
 
 }
@@ -334,6 +440,31 @@
         font-size: 1.5em;
     }
 
+    .info-box {
+        width: 95vw;
+        display: flex;
+        gap: 7px;
+    }
+
+    .icon-lightbulb {
+        font-size: 3.5em;
+        margin-bottom: 4px;
+    }
+
+    .messages {
+        font-size: 1.6em;
+    }
+}
+
+@media (min-width: 820px) and (max-width: 820px) {
+    .icon-lightbulb {
+        font-size: 3.9em;
+        margin-bottom: 5px;
+    }
+
+    .messages {
+        font-size: 1.7em;
+    }
 }
 
 @media (min-width: 820px) and (max-width: 820px) {
@@ -401,7 +532,6 @@
     .pagination-info {
         font-size: 1.6em;
     }
-    
 }
 
 @media (min-width: 1280px) and (max-width: 1280px) {
@@ -471,6 +601,22 @@
     .pagination-info {
         font-size: 1.6em;
     }
+
+    .info-box {
+        width: 95vw;   
+        display: flex;
+        gap: 5px;
+        height: 7vh;
+    }
+
+    .icon-lightbulb {
+        font-size: 2.9em;
+        margin-bottom: 5px;
+    }
+
+    .messages {
+        font-size: 1.5em;
+    }
 }
 
 @media (min-height: 600px) and (max-height: 600px) { 
@@ -534,6 +680,21 @@
 
     .pagination-info {
         font-size: 1.4em;
+    }
+
+    .info-box {
+        height: 55px;
+        display: flex;
+        gap: 5px;
+    }
+
+    .icon-lightbulb {
+        font-size: 2.6em;
+        margin-bottom: 5px;
+    }
+
+    .messages {
+        font-size: 1.3em;
     }
 
 }
@@ -605,6 +766,22 @@
 
     .pagination-info {
         font-size: 1.6em;
+    }
+
+    .info-box {
+        width: 95vw;
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .icon-lightbulb {
+        font-size: 3.8em;
+        margin-bottom: 6px;
+    }
+
+    .messages {
+        font-size: 1.9em;
     }
 }
 
@@ -702,5 +879,21 @@
 
     .pagination-info {
         font-size: 1.4em;
+    }
+
+    .info-box {
+        width: 77vw;
+        height: 7vh;
+        display: flex;
+        gap: 3px;
+    }
+
+    .icon-lightbulb {
+        font-size: 2.8em;
+        margin-bottom: 5px;
+    }
+
+    .messages {
+        font-size: 1.3em;
     }
 }
