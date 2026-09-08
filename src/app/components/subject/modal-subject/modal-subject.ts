@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
     selector: 'app-subject',
@@ -9,5 +10,11 @@ import { Component, OnInit } from '@angular/core';
   })
 
 export class ModalSubject {
+
+  private dialogRef = inject(MatDialogRef);
+
+  closeModal() {
+    this.dialogRef.close();
+  }
 
 }

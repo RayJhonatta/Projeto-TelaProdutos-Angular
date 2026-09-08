@@ -1,1 +1,63 @@
-<h1>TESTE MODAL DE MATÉRIAS</h1>
+<div class="container">
+    <h2 class="title">Criar nova Matéria</h2>
+    <div class="container-second">
+        <div class="container-third">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" placeholder="Digite o título da matéria">
+        </div>
+
+        <div class="container-third">
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" placeholder="Digite a descrição da matéria">
+        </div>
+
+        <div class="container-third">
+            <label for="icon">Ícone:</label>
+            <select id="icon" class="input-select">
+                <optgroup label="Educação & Geral">
+                    <option value="school">🎓 Escola / Geral</option>
+                    <option value="menu_book">📚 Livro / Leitura</option>
+                    <option value="edit">✏️ Escrita / Redação</option>
+                    <option value="history_edu">📜 História</option>
+                </optgroup>
+                
+                <optgroup label="Exatas & Tecnologia">
+                    <option value="calculate">🧮 Matemática</option>
+                    <option value="functions">📐 Geometria</option>
+                    <option value="code">💻 Programação / TI</option>
+                    <option value="memory">🔌 Eletrônica / Tecnologia</option>
+                </optgroup>
+                
+                <optgroup label="Ciências">
+                    <option value="biotech">🔬 Biologia / Ciência</option>
+                    <option value="science">🧪 Química</option>
+                    <option value="public">🌍 Geografia</option>
+                    <option value="psychology">🧠 Psicologia / Mente</option>
+                </optgroup>
+                
+                <optgroup label="Artes & Linguas">
+                    <option value="palette">🎨 Artes / Design</option>
+                    <option value="music_note">🎵 Música</option>
+                    <option value="language">🗣️ Idiomas / Línguas</option>
+                </optgroup>
+                
+                <optgroup label="Produtividade & Metas">
+                    <option value="lightbulb">💡 Ideia / Projeto</option>
+                    <option value="fitness_center">🏋️ Educação Física / Esporte</option>
+                    <option value="schedule">⏱️ Gestão de Tempo</option>
+                    <option value="star">⭐ Destaque / Especial</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div class="container-third">
+            <label for="cor">Cor:</label>
+            <input type="color" name="cor" id="cor" value="#B88F78" class="input-color">
+        </div>
+    </div>
+
+    <div class="actions">
+        <button type="submit" class="btn-submit">Enviar</button>
+        <button type="button" class="btn-cancel" (click)="closeModal()">Cancelar</button>
+    </div>
+</div>
