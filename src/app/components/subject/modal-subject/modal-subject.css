@@ -180,13 +180,13 @@
     }
 }
 
-@media (min-width: 425px) and (max-width: 425px) {
+@media (min-width: 425px) and (max-width: 429px) {
     .container-third input {
-        width: 68vw;
+        width: 63vw;
     }
 
     .input-select {
-        width: 68vw;
+        width: 63vw;
     }
 }
 
