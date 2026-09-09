@@ -19,6 +19,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 15px; 
 }
 
 .title {
@@ -36,13 +37,14 @@
     gap: 20px;
     margin-top: 30px;
     width: 100%;
-    margin-left: 20px;
+    margin-left: 0px;
 }
 
 .container-third {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    width: 100%; 
 }
 
 .container-third label {
@@ -53,13 +55,14 @@
 }
 
 .container-third input {
-    width: 78vw; 
+    width: 100%; 
     border: 1px solid #bba486;
     background-color: #f9f9f9;
     font-size: 1.1em;
     outline: none;
     border-radius: 8px; 
     padding: 12px;
+    box-sizing: border-box;
 }
 
 .container-third input::placeholder {
@@ -67,7 +70,7 @@
 }
 
 .input-select {
-    width: 78vw;
+    width: 100%; 
     padding: 12px;
     border: 1px solid #bba486;
     border-radius: 6px;
@@ -78,10 +81,11 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    box-sizing: border-box;
 }
 
 .input-color {
-    width: 78vw;
+    width: 100%; 
     height: 45px;
     border: 1px solid #bba486;
     border-radius: 6px;
@@ -89,6 +93,7 @@
     color: #4A3B32;
     font-size: 1em;
     outline: none;
+    box-sizing: border-box;
 }
 
 .actions {
@@ -98,10 +103,10 @@
     align-items: center;
     gap: 10px;
     margin-top: 39px;
-    width: 90%;
+    width: 100%;
 }
 
-.btn-submit, .btn-cancel {
+.btn-submit {
     flex: 1;                  
     padding: 13px;
     font-size: 1.1em;
@@ -109,8 +114,25 @@
     border-radius: 10px;      
     transition: all 0.2s ease-in-out;
     text-align: center;
-    background-color: #bba486;
+    background-color: #683711;
+    color: #ffffff !important; 
     border: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.btn-cancel {
+    flex: 1;                  
+    padding: 13px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 10px;      
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    background-color: transparent;
+    color: #683711 !important; 
+    border: 1px solid #bba486;
+    cursor: pointer;
     -webkit-appearance: none;
 }
 
@@ -138,84 +160,103 @@
     }
 }
 
-@media (min-width: 360px) and (max-width: 360px) {
-
+@media (min-width: 357px) and (max-width: 370px) {
     .container-third input {
-        width: 80vw;
+        width: 100%;
+    }
+
+    .input-select {
+        width: 100%;
+    }
+}
+
+@media (min-width: 371px) and (max-width: 380px) {
+    .container-third input {
+        width: 100%;
+    }
+
+    .input-select {
+        width: 100%;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 360px) {
+    .container-third input {
+        width: 100%;
     }
 
     .input-select {
         font-size: 1.2em;
-        width: 80vw;
+        width: 100%;
     }
 } 
 
 @media (min-width: 390px) and (max-width: 390px) {
     .container-third input {
-        width: 75vw;
+        width: 100%;
     }
 
     .input-select {
-        width: 75vw;
+        width: 100%;
     }
 }
 
 @media (min-width: 412px) and (max-width: 412px) {
     .container-third input {
-        width: 71vw;
+        width: 100%;
     }
 
     .input-select {
-        width: 71vw;
+        width: 100%;
     }
 }
 
 @media (min-width: 414px) and (max-width: 414px) {
     .container-third input {
-        width: 71vw;
+        width: 100%;
     }
 
     .input-select {
-        width: 71vw;
-    }
-}
-
-@media (min-width: 425px) and (max-width: 429px) {
-    .container-third input {
-        width: 63vw;
-    }
-
-    .input-select {
-        width: 63vw;
+        width: 100%;
     }
 }
 
 @media (min-width: 430px) and (max-width: 430px) {
     .container-third input {
-        width: 68vw;
+        width: 100%;
     }
 
     .input-select {
-        width: 68vw;
+        width: 100%;
     }
 }
 
 @media (min-width: 440px) and (max-width: 440px) {
     .container-third input {
-        width: 66vw;
+        width: 100%;
     }
 
     .input-select {
-        width: 66vw;
+        width: 100%;
     }
 }
 
 @media (min-width: 540px) and (max-width: 540px) {
     .container-third input {
-        width: 54vw;
+        width: 100%;
     }
 
     .input-select {
-        width: 54vw;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 768px) {
+    .container-third input {
+        width: 100%;
+    }
+
+    .input-select {
+        width: 100%;
     }
 }
