@@ -252,11 +252,314 @@
 }
 
 @media (min-width: 768px) and (max-width: 768px) {
-    .container-third input {
+    :host {
+        height: 60vh;
+        width: 70vw;
+    }
+
+    .title {
+        font-size: 2.2em;
+        margin-top: 30px;
+    }
+
+    .container-third {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .container-third > label {
+        font-size: 1.5em;
+    }
+
+    .container-third > input, .input-select {
+        height: 50px;
+        font-size: 1.4em;
         width: 100%;
     }
 
-    .input-select {
+    .actions {
+        margin-top: 50px;
+    }
+
+    .btn-submit, .btn-cancel {
+        height: 50px;
+    }
+}
+
+@media (min-width: 820px) and (max-width: 820px) { 
+    :host {
+        height: 58vh;
+        width: 66vw;
+    }
+
+    .title {
+        font-size: 2.2em;
+        margin-top: 30px;
+    }
+
+    .container-third {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .container-third > label {
+        font-size: 1.5em;
+    }
+
+    .container-third > input, .input-select {
+        height: 60px;
+        font-size: 1.5em;
         width: 100%;
+    }
+
+    .actions {
+        margin-top: 60px;
+        font-size: 1.1em;
+    }
+
+    .btn-submit, .btn-cancel {
+        height: 55px;
+    }
+}
+
+@media (min-width: 853px) and (max-width: 853px) {
+    :host {
+        height: 58vh;
+        width: 63vw;
+    }
+
+    .title {
+        font-size: 2.5em;
+        margin-top: 30px;
+    }
+
+    .container-third {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    .container-third > label {
+        font-size: 1.8em;
+    }
+
+    .container-third > input, .input-select {
+        height: 62px;
+        font-size: 1.7em;
+        width: 100%;
+    }
+
+    .actions {
+        margin-top: 60px;
+        font-size: 1.4em;
+    }
+
+    .btn-submit, .btn-cancel {
+        height: 65px;
+    }
+} 
+
+@media (min-width: 912px) and (max-width: 912px) {
+    :host {
+        height: 58vh;
+        width: 59vw;
+    }
+
+    .title {
+        font-size: 2.6em;
+        margin-top: 40px;
+    }
+
+    .container-third {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    .container-third > label {
+        font-size: 1.7em;
+    }
+
+    .container-third > input, .input-select {
+        height: 62px;
+        font-size: 1.7em;
+        width: 100%;
+    }
+
+    .actions {
+        margin-top: 80px;
+        font-size: 1.4em;
+    }
+
+    .btn-submit, .btn-cancel {
+        height: 65px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1024px) {
+    :host {
+        height: 58vh;
+        width: 53vw;
+    }
+
+    .title {
+        font-size: 2.6em;
+        margin-top: 40px;
+    }
+
+    .container-third {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+    }
+    
+    .container-third > label {
+        font-size: 1.9em;
+    }
+
+    .container-third > input, .input-select {
+        height: 62px;
+        font-size: 1.8em;
+        width: 100%;
+    }
+
+    .actions {
+        margin-top: 70px;
+        font-size: 1.4em;
+    }
+
+    .btn-submit, .btn-cancel {
+        height: 65px;
+    }
+}
+
+@media (min-width: 1200px) {
+    :host {
+        height: 88vh;
+        width: 37vw;
+    }
+
+    .title {
+        font-size: 2.3em;
+        margin-top: 35px;
+    }
+
+    .container-third {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    .container-third > label {
+        font-size: 1.9em;
+    }
+
+    .container-third > input, .input-select {
+        height: 62px;
+        font-size: 1.8em;
+        width: 100%;
+    }
+
+    .actions {
+        margin-top: 50px;
+        font-size: 1.3em;
+    }
+
+    .btn-submit, .btn-cancel {
+        height: 55px;
+    }
+
+    .btn-submit:hover {
+        background-color: #522b0d;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(104, 55, 17, 0.25);
+    }
+
+    .btn-cancel:hover {
+        background-color: #f7f3ed;
+        border-color: #683711;
+        color: #683711 !important;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(104, 55, 17, 0.12);
+    }
+}
+
+@media (min-height: 600px) and (max-height: 600px) {
+    :host {
+        height: auto;             
+        width: 480px;   
+        max-width: 90vw;          
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    .container-second {
+        gap: 8px;                  
+        margin-top: 15px;
+    }
+
+    .container-third {
+        display: flex;
+        flex-direction: column;   
+        gap: 2px;                 
+        margin-bottom: 0px;         
+    }
+    
+    .container-third > label {
+        font-size: 1.4em;          
+    }
+
+    .container-third > input, 
+    .input-select,
+    .input-color {
+        height: 45px;             
+        font-size: 1.4em;
+        width: 100%;
+    }
+
+    .actions {
+        margin-top: 20px;         
+    }
+
+    .btn-submit, .btn-cancel {
+        height: 48px;
+        font-size: 1.1em;
+    }
+}
+
+@media (min-height: 800px) and (max-height: 800px) {
+    :host {
+        height: 88vh;
+        width: 42vw;
+    }
+
+    .title {
+        font-size: 2.6em;
+        margin-top: 30px;
+    }
+
+    .container-third {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    .container-third > label {
+        font-size: 1.9em;
+    }
+
+    .container-third > input, .input-select {
+        height: 62px;
+        font-size: 1.8em;
+        width: 100%;
+    }
+
+    .actions {
+        margin-top: 45px;
+        font-size: 1.5em;
+    }
+
+    .btn-submit, .btn-cancel {
+        height: 65px;
     }
 }
