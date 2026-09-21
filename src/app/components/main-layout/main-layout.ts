@@ -83,7 +83,7 @@ export class MainLayoutComponent {
   }
 
   task() {
-    //
+    this.router.navigate(['/task']);
   }
 
   calendar() {

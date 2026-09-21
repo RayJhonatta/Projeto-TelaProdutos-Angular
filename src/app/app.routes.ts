@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { LoginScreen } from './components/login-screen/login-screen';
 import { Dashboard } from './components/dashboard/dashboard';
+import { Task } from './components/task/task';
 import { RegistrationScreen } from './components/registration-screen/registration-screen';
 import { authGuard } from '../app/auth-guard';
 import { Subject } from './components/subject/subject';
@@ -28,7 +29,7 @@ export const routes: Routes = [
         children: [
           { path: 'dashboard', component: Dashboard },
           { path: 'subject', component: Subject },
-         // { path: 'task', component: Dashboard },  
+          { path: 'task', component: Task },  
          // { path: 'calendar', component: Dashboard } 
         ]
       }
