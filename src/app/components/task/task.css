@@ -34,17 +34,25 @@
     align-items: center;
 }
 
+.search-and-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: 100%;
+    margin-top: 20px;
+    transform: translateX(-5px);
+}
+
 .search-bar {
     border: 1px solid #D8C8B8;
     color: #4A3B32;
     background-color: #F7F3ED;
-    transform: translateY(25px);
     border-radius: 5px;
-    width: 97%;
+    flex: 1;
+    min-width: 110px;
     height: 40px;
     display: flex;
     align-items: center;
-    align-self: flex-start;
     padding: 0 10px;
     box-sizing: border-box;
     transition: border 0.2s ease;
@@ -56,6 +64,61 @@
 
 .search-bar:focus-within .icon-search {
     color: #683711;
+}
+
+.container-filter {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    flex: 2;
+}
+
+.articles, .status {
+    border: 1px solid #D8C8B8;
+    color: #4A3B32;
+    background-color: #F7F3ED;
+    border-radius: 5px;
+    flex: 1;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    transition: border 0.2s ease;
+    font-weight: bolder;
+}
+
+.status {
+    margin-right: 0;
+}
+
+.container-button-cleaning {
+    display: flex;
+    width: 100%; 
+    margin-top: 2px; 
+}
+
+.button-cleaning {
+    border: 1px solid #D8C8B8;
+    color: #4A3B32;
+    background-color: #F7F3ED;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.button-cleaning:active {
+    background-color: #e9dac7; 
+    transform: scale(0.98); 
 }
 
 .text-search-bar {
@@ -83,14 +146,15 @@
 .button-add-task {
     display: flex;
     flex-direction: row;
-    margin-top: 35px;
+    margin-top: 5px;
+    transform: translateX(-5px);
     width: 100%;
 }
 
 .button {
     background-color: rgb(104, 55, 17);
     border: none;
-    width: 97%;
+    width: 100%;
     height: 40px;
     border-radius: 7px;
     color: white;
@@ -98,6 +162,7 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+    cursor: pointer;
 }
 
 .button:active {
@@ -110,7 +175,7 @@
     flex-direction: row;
     background-image: linear-gradient(135deg, #F7F3ED 0%, #E9DAC7 100%);
     border: none; 
-    width: 93vw;
+    width: 100%;
     border-radius: 5px;
     height: 6vh;
     align-items: center;
@@ -260,11 +325,18 @@
     .paragraph-task {
         font-size: 1.5em;
     }
+    
+    .articles, .status {
+        font-size: 1.3em;
+    }
 
     .button-add-task {
         display: flex;
         align-self: flex-end;
-        margin-top: 35px;
+    }
+
+    .button-cleaning {
+        font-size: 1.4em;
     }
 
     .button-add-task > .button {
@@ -343,10 +415,14 @@
         font-size: 1.9em;
     }
 
-    .search-bar {
-        transform: translateY(29px);
+    .search-bar, .articles, .status {
+        transform: translateY(10px);
         width: 98%;
         height: 60px;
+    }
+
+    .articles, .status {
+        font-size: 2.2em;
     }
 
     .icon-search {
@@ -356,12 +432,27 @@
     .text-search-bar { 
         font-size: 2.2em;
         margin-bottom: 1px;
-    }   
+    } 
+
+    .container-button-cleaning {
+        display: flex;
+        align-self: flex-end;
+        margin-top: 20px;
+    }
+    
+    .button-cleaning {
+        width: 100%;
+        height: 60px;
+        font-size: 2.1em;
+    }
+
+    .icon-cleaning, .icon-add {
+        font-size: 1.4em;
+    }
     
     .button-add-task {
         display: flex;
         align-self: flex-end;
-        margin-top: 35px;
     }
 
     .button {
@@ -470,10 +561,49 @@
         font-size: 2.3em;
     }
 
+    .search-and-filter {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        width: 98%;
+    }
+
     .search-bar {
-        width: 40vw;
+        flex: 2.5;
         height: 60px;
-        transform: translateY(35px);
+
+    }
+
+    .container-filter {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        flex: 2; 
+    }
+
+    .articles, .status {
+        width: 20vw;
+        height: 60px;
+        transform: none;
+        font-size: 1.7em;
+    }
+
+    .container-button-cleaning {
+        flex: 1; 
+        margin-top: 0;
+    }
+
+    .icon-cleaning {
+        font-size: 1.3em;
+    }
+
+    .button-cleaning {
+        width: 20vw; 
+        height: 60px;
+        padding: 0 30px; 
+        white-space: nowrap; 
+        font-size: 1.6em;
     }
 
     .icon-search {
@@ -488,7 +618,11 @@
     .button-add-task {
         display: flex;
         align-self: flex-end;
-        margin-top: 60px;
+        margin-top: 10px;
+    }
+
+    .icon-add {
+        font-size: 1.4em;
     }
 
     .button {
@@ -649,6 +783,7 @@
         margin-left: 18% !important;
         transform: translateX(50px);
         display: flex;
+        flex-direction: column;
         gap: 10px;
     }
 
@@ -665,10 +800,50 @@
         font-size: 1.6em;
     }
 
+    .search-and-filter {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+    }
+
     .search-bar {
-        transform: translateY(10px);
-        width: 77vw;
+        flex: 2;
         height: 50px;
+        width: auto;
+        transform: none;
+    }
+
+    .container-filter {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        flex: 1.6;
+    }
+
+    .articles, .status {
+        width: 100%;
+        height: 50px;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .container-button-cleaning {
+        flex: 1;
+        margin-top: 0;
+    }
+
+    .button-cleaning {
+        width: 75%;
+        height: 50px;
+        padding: 0 16px;
+        white-space: nowrap;
+        font-size: 1.4em;
+    }
+
+    .icon-cleaning {
+        font-size: 1.4em;
     }
 
     .icon-search {
@@ -684,7 +859,7 @@
         display: flex;
         align-self: flex-end;
         margin-right: -900px;
-        margin-top: -140px;
+        margin-top: -149px;
     }
 
     .button {

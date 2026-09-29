@@ -840,6 +840,13 @@
         margin-top: -75px;
     }
 
+    .button {
+        width: 180px;
+        height: 50px;
+        font-size: 1.7em;
+        cursor: pointer;
+    }
+
     .button:hover {
         background-color: #502a0d;
     }
