@@ -237,17 +237,32 @@
     margin-left: 5px;
 }
 
+.pagination {
+    background-color: #F7F3ED;
+    border: 2px solid #D8C8B8;       
+    border-radius: 5px;
+    padding: 10px 16px;
+    transform: translate(-5px, 20px);
+    width: 96vw;
+    
+}
+
+.pagination-info {
+    color: #4A3B32;           
+}
+
 .info-box {
     display: flex;
     flex-direction: row;
     background-image: linear-gradient(135deg, #F7F3ED 0%, #E9DAC7 100%);
     border: none; 
-    width: 100%;
+    width: 96vw;
     border-radius: 5px;
     height: 6vh;
     align-items: center;
     justify-content: center;
     gap: 2px;
+    transform: translate(-5px, 30px);
 }
 
 .icon-lightbulb {
@@ -305,7 +320,7 @@
     }
 }
 
-@media (min-width: 375px) and (max-width: 375px) {
+@media (max-width: 375px) {
     .paragraph-without-task {
         font-size: 1.3em;
     }
@@ -334,6 +349,10 @@
 
     .container-header-task {
         font-size: 1.2em;
+    }
+
+    .info-box > .messages {
+        font-size: 0.9em;
     }
 }
 
@@ -376,6 +395,10 @@
     .container-header-task {
         font-size: 1.4em;
     }
+
+    .messages {
+        font-size: 1em;
+    }
 }
 
 @media (min-width: 430px) and (max-width: 430px) {
@@ -403,6 +426,10 @@
         width: 250px;
         height: 40px;
     }
+
+    .pagination-info {
+        font-size: 1.1em;          
+    } 
 
     .icon-lightbulb {
         font-size: 2.6em;
@@ -456,6 +483,10 @@
         font-size: 1.5em;
     }
 
+    .pagination {
+        font-size: 1.1em;
+    }
+
     .icon-lightbulb {
         font-size: 2.7em;
         margin-bottom: 4px;
@@ -485,9 +516,9 @@
     }
 
     .articles, .status {
-        background-size: 22px !important; /* Aumentado o tamanho da seta */
+        background-size: 22px !important;
         background-position: right 12px center !important;
-        padding-right: 36px !important; /* Espaço para o texto não sobrepor a seta maior */
+        padding-right: 36px !important;
     }
 
     .button-add-task {
@@ -498,6 +529,11 @@
     .search-bar {
         width: 350px;
     }
+
+    .pagination-info {
+        font-size: 1.2em;
+    }
+
 
     .icon-lightbulb {
         font-size: 2.3em;
@@ -534,6 +570,7 @@
         border: 3px solid #D8C8B8;
         border-radius: 7px;
         padding: 7px;
+        width: 97vw;
     }
 
     .search-bar, .articles, .status {
@@ -577,6 +614,8 @@
     .button-add-task {
         display: flex;
         align-self: flex-end;
+        transform: translateX(7px);
+        width: 97vw;
     }
 
     .button {
@@ -586,7 +625,7 @@
     }
 
     .body-task {
-        width: 95vw;
+        width: 97vw;
     }
 
     .container-header-task {
@@ -608,6 +647,22 @@
 
     .paragraph-without-task {
         font-size: 2em;
+    }
+
+    .pagination {
+        width: 97vw;
+        height: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .pagination-info {
+        font-size: 1.5em;
+    }
+
+    .info-box {
+        width: 97vw;
     }
 
     .icon-lightbulb {
@@ -687,6 +742,10 @@
     .search-bar {
         width: 570px;
         height: 60px;
+    }
+
+    .pagination-info {
+        font-size: 1.6em;
     }
 }
 
@@ -774,6 +833,8 @@
         display: flex;
         align-self: flex-end;
         margin-top: 10px;
+        transform: translateX(7px);
+        width: 98vw;
     }
 
     .icon-add {
@@ -787,7 +848,7 @@
     }
 
     .body-task {
-        width: 95vw;
+        width: 96vw;
     }
 
     .container-header-task {
@@ -810,6 +871,22 @@
 
     .paragraph-without-task {
         font-size: 2em;
+    }
+
+    .pagination {
+        width: 96vw;
+        height: 7vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .pagination-info {
+        font-size: 1.6em;
+    }
+
+    .info-box {
+        height: 60px;
     }
 
     .icon-lightbulb {
@@ -870,6 +947,17 @@
         margin-bottom: 1px;
     }
 
+    .pagination {
+        height: 10vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .pagination-info {
+        font-size: 1.4em;
+    }
+
     .icon-lightbulb {
         font-size: 2.6em;
         margin-bottom: 5px;
@@ -926,6 +1014,18 @@
     .text-search-bar { 
         font-size: 1.9em;
         margin-bottom: 1px;
+    }
+
+    .pagination {
+        width: 95vw;
+        height: 5vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .pagination-info {
+        font-size: 1.6em;
     }
 
     .icon-lightbulb {
@@ -1089,6 +1189,25 @@
 
     .paragraph-without-task {
         font-size: 1.5em;
+    }
+
+    .pagination {
+        width: 78vw;
+        height: 7vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        transform: translate(-5px, 140px)
+    }
+
+    .pagination-info {
+        font-size: 1.4em;
+    }
+
+    .info-box {
+        transform: translate(-5px, 150px);
+        width: 78vw;
+        height: 50px;
     }
 
     .icon-lightbulb {

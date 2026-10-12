@@ -24,7 +24,7 @@
       </div>
     </div>    
     <div class="button-add-task">
-      <button type="submit" class="button"><span class="material-icons icon-add">add</span> Nova Tarefa</button>
+      <button type="submit" class="button" (click)="openModal()"><span class="material-icons icon-add">add</span> Nova Tarefa</button>
     </div>
     <div class="body-task">
       <div class="container-header-task">
@@ -37,5 +37,12 @@
           <span>Ações</span>
       </div>
       <span class="paragraph-without-task">Nenhuma tarefa registrada no momento.</span>
+    </div>
+    <div class="pagination">
+      <span class="pagination-info">Mostrando 0 de 0 Matérias</span>
+    </div>
+    <div class="info-box">
+      <span class="material-icons icon-lightbulb">lightbulb</span>
+      <span class="messages">Mantenha suas tarefas em dia para otimizar seus estudos! Não desista!</span>
     </div>
 </div>

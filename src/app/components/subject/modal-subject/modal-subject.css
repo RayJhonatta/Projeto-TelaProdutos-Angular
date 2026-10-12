@@ -181,15 +181,25 @@
 }
 
 @media (min-width: 360px) and (max-width: 360px) {
-    .container-third input {
-        width: 100%;
+    :host {
+        width: 270px !important; 
+        height: 70vh;
     }
 
+    .container {
+        padding: 0 10px;
+    }
+
+    .title {
+        font-size: 1.6em !important; 
+        white-space: nowrap;    
+    }
+
+    .container-third input,
     .input-select {
-        font-size: 1.2em;
         width: 100%;
     }
-} 
+}
 
 @media (min-width: 390px) and (max-width: 390px) {
     .container-third input {

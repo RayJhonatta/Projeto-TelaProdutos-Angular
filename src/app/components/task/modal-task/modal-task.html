@@ -1,0 +1,25 @@
+<div class="container">
+    <h2 class="title">Criar nova Tarefa</h2>
+    <div class="container-second">
+        <div class="container-third">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" placeholder="Digite o título da matéria">
+        </div>
+
+        <div class="container-third">
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" placeholder="Digite a descrição da matéria">
+        </div>
+
+        <div class="container-third">
+            <label for="icon">Matéria:</label>
+            <select id="icon" class="input-select">
+                <option value="">Matéria teste 01</option>
+            </select>
+        </div>
+    </div>
+    <div class="actions">
+        <button type="submit" class="btn-submit">Enviar</button>
+        <button type="button" class="btn-cancel" (click)="closeModal()">Cancelar</button>
+    </div>
+</div>
