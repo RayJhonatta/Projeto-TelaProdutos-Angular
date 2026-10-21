@@ -87,6 +87,6 @@ export class MainLayoutComponent {
   }
 
   calendar() {
-    //
+    this.router.navigate(['/calendar']);
   }
 }

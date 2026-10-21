@@ -5,6 +5,7 @@ import { Task } from './components/task/task';
 import { RegistrationScreen } from './components/registration-screen/registration-screen';
 import { authGuard } from '../app/auth-guard';
 import { Subject } from './components/subject/subject';
+import { Calendar } from './components/calendar/calendar';
 import { MainLayoutComponent } from './components/main-layout/main-layout';
 
 
@@ -30,7 +31,7 @@ export const routes: Routes = [
           { path: 'dashboard', component: Dashboard },
           { path: 'subject', component: Subject },
           { path: 'task', component: Task },  
-         // { path: 'calendar', component: Dashboard } 
+          { path: 'calendar', component: Calendar } 
         ]
       }
 ];

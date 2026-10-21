@@ -198,7 +198,6 @@
 
 
 @media (min-width: 390px) and (max-width: 390px) {
-
     .info-box {
         display: flex;
         gap: 0px;
@@ -241,7 +240,6 @@
 }
 
 @media (min-width: 430px) and (max-width: 430px) {
-
     .info-box {
         display: flex;
         gap: 1px;

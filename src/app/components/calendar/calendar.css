@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.calendar-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 15px;
+    font-size: 0.8em;
+    margin-top: -80px;
+}
+
+.icons-calendar-container {
+    vertical-align: middle;
+    color: #835814;
+    font-size: 1.3em;
+}
+
+.paragraph-calendar {
+    line-height: 1.3em;
+    width: 70%;
+    font-size: 1em;
+    color: gray;
+}
+
+.title-calendar {
+    display: flex;
+    gap: 10px;  
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (min-width: 344px) and (max-width: 344px) {
+    .calendar-container {
+        width: 90%;
+    }
+}
+
+@media (min-width: 393px) and (max-width: 393px) {
+    .paragraph-calendar {
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 412px) and (max-width: 430px) {
+    .paragraph-calendar {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 414px) and (max-width: 414px) {
+    .paragraph-calendar {
+        font-size: 1.2em;
+        width: 75%;
+    }
+}
+
+@media (min-width: 440px) and (max-width: 440px) { 
+    .icons-calendar-container {
+        font-size: 1.8em;
+    }
+
+    .title-calendar {
+        font-size: 2em;
+    }
+    
+    .paragraph-calendar {
+        font-size: 1.5em;
+    }
+}
+
+
+@media (min-width: 540px) and (max-width: 540px) {
+    .calendar-container {
+        margin-top: -106px;
+    }
+
+    .calendar-container > .title-calendar {
+        font-size: 2.2em;
+    }
+
+    .calendar-container > .title-calendar > .icons-calendar-container {
+        font-size: 1.1em;
+    }
+
+    .calendar-container > .paragraph-calendar {
+        font-size: 1.4em;
+        width: 65%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 912px) {
+    .calendar-container {
+        margin-top: -95px;
+        display: flex;
+        gap: 10px;
+        margin-right: 20px;
+    }
+
+    .calendar-container > .title-calendar {
+        font-size: 3.4em;
+    }
+
+    .calendar-container > .title-calendar > .icons-calendar-container {
+        font-size: 1em;
+    }
+
+    .calendar-container > .paragraph-calendar {
+        font-size: 1.9em;
+    }
+}
+
+@media (min-height: 1280px) and (max-height: 1280px) {
+    .calendar-container {
+        font-size: 0.8em;
+        margin-left: 30px;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1280px) {
+    .calendar-container {
+        margin-top: -100px;
+        margin-left: 40px;
+        font-size: 0.9em;
+    }
+
+    .calendar-container > .title-calendar {
+        font-size: 3.5em;
+    }
+    
+    .calendar-container > .title-calendar > .icons-calendar-container {
+        font-size: 1em;
+        margin-bottom: 2px;
+    }
+
+    .calendar-container > .paragraph-calendar {
+        font-size: 2.3em;
+    }
+}
+
+@media (min-height: 600px) and (max-height: 600px) { 
+    .calendar-container {
+        margin-top: -105px;
+        margin-left: 30px;
+        font-size: 1em;
+    }
+
+    .calendar-container > .title-calendar {
+        font-size: 2.7em;
+    }
+
+    .calendar-container > .title-calendar > .icons-calendar-container {
+        font-size: 1em;
+        margin-bottom: 3px;
+    }
+ 
+    .calendar-container > .paragraph-calendar {
+        font-size: 1.8em;
+    }
+}
+
+@media (min-height: 1366px) and (max-height: 1366px) {
+    .calendar-container {
+        margin-top: -105px;
+        margin-left: 30px;
+        font-size: 0.9em;
+    }
+
+    .calendar-container > .title-calendar {
+        font-size: 3.4em;
+    }
+
+    .calendar-container > .title-calendar > .icons-calendar-container {
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
+
+    .calendar-container > .paragraph-calendar {
+        font-size: 2.1em;
+    }
+}
+
+@media (min-height: 1368px) and (max-height: 1368px) {
+    .calendar-container {
+        font-size: 0.9em;
+        margin-left: 30px;
+    }
+}
+
+@media (min-width: 1290px) {
+    .calendar-container {
+        margin-top: 50px !important;
+        margin-left: 18% !important;
+        transform: translateX(50px);
+        display: flex;
+        gap: 10px;
+    }
+
+    .calendar-container > .title-calendar {
+        font-size: 3em;
+    }
+
+    .calendar-container > .title-calendar > .icons-calendar-container {
+        font-size: 1em;
+        margin-bottom: 3px;
+    }
+
+    .calendar-container > .paragraph-calendar {
+        font-size: 1.6em;
+    }
+}
