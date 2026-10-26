@@ -118,6 +118,23 @@ input[type="time"]:focus-within {
     border: none;
 }
 
+.container-study-time-two {
+    border: 1px solid rgba(227, 227, 227, 0.948);
+    border-radius: 7px;
+    padding: 10px;
+    margin-top: 30px;
+    width: 93vw;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-timestamp {
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
 
 @media (min-width: 344px) and (max-width: 344px) {
     .calendar-container {
@@ -132,6 +149,14 @@ input[type="time"]:focus-within {
 
     .container-study-time {
         height: 280px;
+    }
+
+    .container-study-time-two {
+        height: 280px;
+    }
+
+    .message-timestamp {
+        font-size: 1.3em;
     }
 
     .button-time {
@@ -149,6 +174,14 @@ input[type="time"]:focus-within {
 
     .container-study-time {
         height: 285px;
+    }
+
+    .container-study-time-two {
+        height: 285px;
+    }
+
+    .message-timestamp {
+        font-size: 1.3em;
     }
 
     .button-time {
@@ -169,6 +202,14 @@ input[type="time"]:focus-within {
 @media (min-width: 427px) and (max-width: 427px) { 
     .container-study-time {
         height: 285px;
+    }
+
+    .container-study-time-two {
+        height: 285px;
+    }
+    
+    .message-timestamp {
+        font-size: 1.4em;
     }
 
     .button-time {
@@ -194,6 +235,14 @@ input[type="time"]:focus-within {
 
     .container-study-time {
         height: 285px;
+    }
+
+    .container-study-time-two {
+        height: 285px;
+    }
+
+    .message-timestamp {
+        font-size: 1.4em;
     }
 
     .button-time {
@@ -283,6 +332,15 @@ input[type="time"]:focus-within {
         font-size: 1.5em;
         padding: 13px;
     }
+
+    .container-study-time-two {
+        height: 370px !important;
+        width: 95vw;
+    } 
+
+    .message-timestamp {
+        font-size: 1.8em;
+    }
 }
 
 @media (min-height: 1280px) and (max-height: 1280px) {
@@ -348,6 +406,15 @@ input[type="time"]:focus-within {
         height: 55px;
         font-size: 1.7em;
         padding: 13px;
+    }
+
+    .container-study-time {
+        width: 94vw;
+        height: 420px;
+    }
+
+    .message-timestamp {
+        font-size: 1.8em;
     }
 }
 
@@ -455,5 +522,11 @@ input[type="time"]:focus-within {
     .button-time:active {
         background-color: #522b0d;
         transform: translateY(1px);
+    }
+
+    .container-study-time-two {
+        width: 38vw;
+        height: 280px;
+        transform: translate(570px, -320px);
     }
 }
