@@ -53,7 +53,7 @@
     padding-top: 10px;
 }
 
-.icons-timer-container {
+.icons-timer-container, .icons-list-container {
     color: #582C0E;
     background-color: #f1dfccba;
     border-radius: 50%;
@@ -120,21 +120,42 @@ input[type="time"]:focus-within {
 
 .container-study-time-two {
     border: 1px solid rgba(227, 227, 227, 0.948);
-    border-radius: 7px;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 20px;
     margin-top: 30px;
     width: 93vw;
-    height: 270px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.header-container-study-time-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.body-list {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid rgba(227, 227, 227, 0.948);
+    border-radius: 10px;
+    width: 100%;
+    height: 120px;
 }
 
 .message-timestamp {
-    font-size: 1.2em;
-    font-weight: bolder;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #555;
 }
-
 
 @media (min-width: 344px) and (max-width: 344px) {
     .calendar-container {
@@ -152,7 +173,7 @@ input[type="time"]:focus-within {
     }
 
     .container-study-time-two {
-        height: 280px;
+        height: 310px;
     }
 
     .message-timestamp {
@@ -164,6 +185,15 @@ input[type="time"]:focus-within {
         margin-left: 125px;
         height: 45px;
         padding: 13px;
+    }
+
+    .header-container-study-time-two {
+        transform: none; 
+        margin-top: 0;
+    }
+    
+    .body-list {
+        height: 230px;
     }
 }
 
@@ -177,7 +207,7 @@ input[type="time"]:focus-within {
     }
 
     .container-study-time-two {
-        height: 285px;
+        height: 310px;
     }
 
     .message-timestamp {
@@ -189,6 +219,16 @@ input[type="time"]:focus-within {
         margin-left: 130px;
         height: 44px;
         padding: 13px;
+    }
+
+    .header-container-study-time-two {
+        font-size: 1.1em;
+        transform: none;
+        margin-top: 0;
+    }
+
+    .body-list {
+        height: 230px;
     }
 }
 
@@ -238,7 +278,7 @@ input[type="time"]:focus-within {
     }
 
     .container-study-time-two {
-        height: 285px;
+        height: 310px; 
     }
 
     .message-timestamp {
@@ -251,8 +291,17 @@ input[type="time"]:focus-within {
         height: 45px;
         padding: 13px;
     }
-}
 
+    .header-container-study-time-two {
+        font-size: 1.1em;
+        transform: none;
+        margin-top: 0;
+    }
+
+    .body-list {
+        height: 230px;
+    }
+}
 
 @media (min-width: 540px) and (max-width: 540px) {
     .calendar-container {
@@ -293,17 +342,16 @@ input[type="time"]:focus-within {
         font-size: 1.9em;
     }
 
-
     .container-study-time {
         height: 370px !important;
         width: 95vw;
     }
 
     .header-container-study-time {
-            margin-top: 10px;
-            font-size: 1.3em;
-            display: flex;
-            gap: 10px;
+        margin-top: 10px;
+        font-size: 1.3em;
+        display: flex;
+        gap: 10px;
     }
 
     .time-fields {
@@ -320,7 +368,6 @@ input[type="time"]:focus-within {
         font-size: 1.4em;
     }
 
-
     .time-fields > input[type="time"]::-webkit-calendar-picker-indicator {
        font-size: 1.4em !important;
     }
@@ -334,9 +381,19 @@ input[type="time"]:focus-within {
     }
 
     .container-study-time-two {
-        height: 370px !important;
+        height: 410px !important; 
         width: 95vw;
     } 
+
+    .header-container-study-time-two {
+        font-size: 1.4em;
+        transform: none;
+        margin-top: 5px;
+    }
+
+    .body-list {
+        height: 320px; 
+    }
 
     .message-timestamp {
         font-size: 1.8em;
@@ -408,9 +465,22 @@ input[type="time"]:focus-within {
         padding: 13px;
     }
 
-    .container-study-time {
+    .container-study-time-two {
         width: 94vw;
-        height: 420px;
+        height: 460px;
+        display: flex;
+        gap: 23px;
+    }
+
+    .header-container-study-time-two {
+        font-size: 1.5em;
+        transform: none;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .body-list {
+        height: 360px; 
     }
 
     .message-timestamp {
@@ -528,5 +598,19 @@ input[type="time"]:focus-within {
         width: 38vw;
         height: 280px;
         transform: translate(570px, -320px);
+    }
+
+    .header-container-study-time-two {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 10px;
+        transform: none;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .body-list {
+        height: 320px;
     }
 }
