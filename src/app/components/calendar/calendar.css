@@ -143,18 +143,39 @@ input[type="time"]:focus-within {
 
 .body-list {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 2px solid rgba(227, 227, 227, 0.948);
     border-radius: 10px;
     width: 100%;
     height: 120px;
+    gap: 10px;
 }
 
 .message-timestamp {
     font-size: 1.1em;
     font-weight: 500;
     color: #555;
+    transform: translateY(7px);
+}
+
+.total-message-of-the-day {
+    border-top: 2px solid rgba(227, 227, 227, 0.948);
+    width: 100%;
+    transform: translateY(25px);
+    background-color: #e0e0e05e;
+    height: 36px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.daily-total {
+    font-size: 1.1em;
+    display: inline-block;
+    margin-top: 7px;
+    margin-left: 15px;
+    font-weight: bolder;
 }
 
 @media (min-width: 344px) and (max-width: 344px) {
@@ -176,10 +197,6 @@ input[type="time"]:focus-within {
         height: 310px;
     }
 
-    .message-timestamp {
-        font-size: 1.3em;
-    }
-
     .button-time {
         margin-top: 16px;
         margin-left: 125px;
@@ -195,6 +212,25 @@ input[type="time"]:focus-within {
     .body-list {
         height: 230px;
     }
+
+    .message-timestamp {
+        font-size: 1.3em;
+    }
+
+    .total-message-of-the-day {
+        border-top: 2px solid rgba(227, 227, 227, 0.948);
+        width: 100%;
+        height: 40px;
+        transform: translateY(77px);
+    }
+    
+    .daily-total {
+        font-size: 1.2em;
+        display: inline-block;
+        margin-top: 9px;
+        margin-left: 15px;
+        font-weight: bolder;
+    }
 }
 
 @media (min-width: 412px) and (max-width: 430px) {
@@ -208,10 +244,6 @@ input[type="time"]:focus-within {
 
     .container-study-time-two {
         height: 310px;
-    }
-
-    .message-timestamp {
-        font-size: 1.3em;
     }
 
     .button-time {
@@ -229,6 +261,25 @@ input[type="time"]:focus-within {
 
     .body-list {
         height: 230px;
+    }
+
+    .message-timestamp {
+        font-size: 1.3em;
+    }
+
+    .total-message-of-the-day {
+        border-top: 2px solid rgba(227, 227, 227, 0.948);
+        width: 100%;
+        height: 40px;
+        transform: translateY(77px);
+    }
+    
+    .daily-total {
+        font-size: 1.3em;
+        display: inline-block;
+        margin-top: 9px;
+        margin-left: 15px;
+        font-weight: bolder;
     }
 }
 
@@ -258,6 +309,21 @@ input[type="time"]:focus-within {
         height: 44px;
         padding: 13px;
     }
+
+    .total-message-of-the-day {
+        border-top: 2px solid rgba(227, 227, 227, 0.948);
+        width: 100%;
+        height: 40px;
+        transform: translateY(65px);
+    }
+    
+    .daily-total {
+        font-size: 1.3em;
+        display: inline-block;
+        margin-top: 9px;
+        margin-left: 15px;
+        font-weight: bolder;
+    }
 }
 
 @media (min-width: 440px) and (max-width: 440px) { 
@@ -281,10 +347,6 @@ input[type="time"]:focus-within {
         height: 310px; 
     }
 
-    .message-timestamp {
-        font-size: 1.4em;
-    }
-
     .button-time {
         margin-top: 16px;
         margin-left: 145px;
@@ -300,6 +362,25 @@ input[type="time"]:focus-within {
 
     .body-list {
         height: 230px;
+    }
+
+    .message-timestamp {
+        font-size: 1.4em;
+    }
+
+    .total-message-of-the-day {
+        border-top: 2px solid rgba(227, 227, 227, 0.948);
+        width: 100%;
+        height: 40px;
+        transform: translateY(77px);
+    }
+    
+    .daily-total {
+        font-size: 1.3em;
+        display: inline-block;
+        margin-top: 9px;
+        margin-left: 15px;
+        font-weight: bolder;
     }
 }
 
@@ -397,6 +478,22 @@ input[type="time"]:focus-within {
 
     .message-timestamp {
         font-size: 1.8em;
+        transform: translateY(10px);
+    }
+
+    .total-message-of-the-day {
+        border-top: 2px solid rgba(227, 227, 227, 0.948);
+        width: 100%;
+        height: 60px;
+        transform: translateY(113px);
+    }
+    
+    .daily-total {
+        font-size: 1.9em;
+        display: inline-block;
+        margin-top: 19px;
+        margin-left: 70px;
+        font-weight: bolder;
     }
 }
 
@@ -485,6 +582,21 @@ input[type="time"]:focus-within {
 
     .message-timestamp {
         font-size: 1.8em;
+    }
+
+    .total-message-of-the-day {
+        border-top: 2px solid rgba(227, 227, 227, 0.948);
+        width: 100%;
+        height: 70px;
+        transform: translateY(126px);
+    }
+    
+    .daily-total {
+        font-size: 2.1em;
+        display: inline-block;
+        margin-top: 24px;
+        margin-left: 130px;
+        font-weight: bolder;
     }
 }
 
@@ -612,5 +724,20 @@ input[type="time"]:focus-within {
 
     .body-list {
         height: 320px;
+    }
+
+    .total-message-of-the-day {
+        border-top: 2px solid rgba(227, 227, 227, 0.948);
+        width: 100%;
+        height: 40px;
+        transform: translateY(62px);
+    }
+    
+    .daily-total {
+        font-size: 1.3em;
+        display: inline-block;
+        margin-top: 9px;
+        margin-left: 25px;
+        font-weight: bolder;
     }
 }
